@@ -137,7 +137,7 @@ This mode is intended for viewing and editing the departments list.
 - User selects item "Departments";
 - Application displays list of employees;
 
-![Edit employee](/home/alex/WireframeSketcher/wireframing-tutorial/Departments.screen)
+![Edit employee](/home/alex/pythonProject/image/Departments.pdf)
 
 The list displays the following columns:
 
