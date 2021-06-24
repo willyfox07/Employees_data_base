@@ -25,4 +25,4 @@ The mode is designed to view the list of employees.
 - User select item "Employees";
 - Application displays list of Employees.
 
-![Main menu](Снимок экрана от 2021-06-22 17-37-26.png)
+![Main menu](/home/alex/pythonProject/Снимок экрана от 2021-06-22 17-37-26.png)
