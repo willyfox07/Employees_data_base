@@ -20,7 +20,7 @@ Applecation should provide:
 
 The mode is designed to view the list of employees.
 
-*Main scenario*
+**Main scenario**
 
 - User select item "Employees";
 - Application displays list of Employees.
@@ -28,7 +28,7 @@ The mode is designed to view the list of employees.
 ![Main menu](/image/Start.png)
 Pic.1.1 View the list of employees.
 
-The list displays the following columns:
+**The list displays the following columns:**
 
 - Name - Name of employees;
 - Surname - Surname of employees;
@@ -36,13 +36,13 @@ The list displays the following columns:
 - Position held - what position employee does;
 - Department - which department does the employee belong to.
 
-Filtering by date:
+**Filtering by date:**
 
 - In the list of employees mode, the user sets a date filter and presses the refresh list button
 
 ### 1.2 Add employee
 
-*Mais scenario:*
+**Mais scenario:**
 
 - User clicks the "Add" button in the list of employees view mode;
 - Application displays form to enter data about employee;
@@ -52,7 +52,7 @@ Filtering by date:
 - If error occurs, then error message is displaying;
 - If new data about employee is succesfully added, then list of employees with added records is displaying.
 
-*Cancel operation scenario*:
+**Cancel operation scenario:**
 
 - User clicks the “Add” button in the list of employee view mode;
 - Application displays form to enter employee data;
@@ -62,7 +62,7 @@ Filtering by date:
 
 ![Add employee](/image/add_employee.png)
 
-When adding a employee, the following details are entered:
+**When adding a employee, the following details are entered:**
 
 - Employee name;
 - Employee surname;
@@ -72,7 +72,7 @@ When adding a employee, the following details are entered:
 
 ### 1.3 Edit employee
 
-*Main scenario:*
+**Main scenario:**
 
 - User clicks the "Edit" button in the employee list view mode;
 - Application displays form to enter employee data;
@@ -80,7 +80,7 @@ When adding a employee, the following details are entered:
 - Data don't save in data base, then list of employees records is displaying to user;
 - If the user select the menu item "Employees", "Departments", the data will not be saved to the database and the corresponding form with updated data will be opened.
 
-*Cancel operation scenario:*
+**Cancel operation scenario:**
 
 - User clicks the “Edit” button in the employee list view mode;
 - Application displays form to enter employee data;
@@ -90,7 +90,7 @@ When adding a employee, the following details are entered:
 
 ![Edit employee](/image/edit_employee.png)
 
-When editing a employee, the following details are entered:
+**When editing a employee, the following details are entered:**
 
 - Employee name;
 - Employee surname;
@@ -98,7 +98,7 @@ When editing a employee, the following details are entered:
 - Position held - what position employee does;
 - Department - which department does the employee belong to.
 
-*Constrains for data validation:*
+**Constrains for data validation:**
 
 - Employee name - maximum length of 90 characters;
 - Employee surname - maximum length of 90 characters;
@@ -108,7 +108,7 @@ When editing a employee, the following details are entered:
 
 ### 1.4 Removing employee
 
-*Main scenario:*
+**Main scenario:**
 
 - The user, while in the list of employees, presses the "Delete" button in the selected employee line;
 - If the employee can be removed, a confirmation dialog is displayed;
@@ -132,25 +132,99 @@ When editing a employee, the following details are entered:
 
 This mode is intended for viewing and editing the departments list.
 
-*Main scenario:*
+**Main scenario:**
 
 - User selects item "Departments";
 - Application displays list of employees;
 
 ![Edit employee](/image/Departments.png)
 
-The list displays the following columns:
+**The list displays the following columns:**
 
 - Department - department name;
 - The number of employees - how mane employees in this dapetment;
 - Head - head of department;
 - Location - where this department located.
 
-**Filtering by date:**
+**Filtering by location:**
 
 - In the clients list view mode, the user sets a location filter and presses the refresh list button.
 
-*Restrictions:*
 
+### 2.2 Add department
+
+**Main scenario:**
+
+- User clicks the "Add" button in the list of departments view mode;
+- Application displays form to enter data about department;
+- User enters data about department and presses "Save" button;
+- If any data is entered incorrectly, incorrect data messages are displayed;
+- If entered data is valid, then record is additing to database;
+- If error occurs, then error message is displaying;
+- If new data about department is succesfully added, then list of department with added records is displaying.
+
+**Cancel operation scenario:**
+
+- User clicks the “Edit” button in the department list view mode;
+- Application displays form to enter department data;
+- User enters department data and presses “Cancel” button;
+- Data don’t save in data base, then list of department records is displaying to user.
+- If the user selects the menu item "Employees”, ”Departments”, the data will not be saved to the database and the corresponding form with updated data will be opened.
+
+![add department](/image/add_department.png)
+
+**When adding a department, the following details are entered:**
+
+- Department;
+- Number of employees - how many people work in the department;
+- Head -  head of department;
+- Location - where this department located.
+
+**Constrains for data validation:**
+
+- Department - maximum length for 45 characters;
+- Number of employees - maximum length for 30 characters;
+- Head - maximum length for 45 characters;
+- Location - maximum length for 45 characters;
+
+### 2.3 Edit department
+
+**Main scenario:**
+
+- User clicks the "Edit" button in the department list view mode;
+- Application displays form to enter department data;
+- User enters department data and presses "Cancel" button;
+- Data don't save in data base, then list of department records is displaying to user;
+- If the user select the menu item "Employees", "Departments", the data will not be saved to the database and the corresponding form with updated data will be opened.
+
+**Cancel operation scenario:**
+
+- User clicks the “Edit” button in the department list view mode;
+- Application displays form to enter department data;
+- User enters department data and presses “Cancel” button;
+- Data don’t save in data base, then list of department records is displaying to user.
+- If the user selects the menu item "Employees”, ”Departments”, the data will not be saved to the database and the corresponding form with updated data will be opened.
+
+![Edit department](/image/edit_department.png)
+
+### 2.4 Removing department
+
+**Main scenario:**
+
+- The user, while in the list of department, presses the "Delete" button in the selected department line;
+- If the department can be removed, a confirmation dialog is displayed;
+- The user confirms the removal the department;
+- Record is delected from database;
+- If error occurs, then error message displays;
+- If department data is succesfully deleted, then list of department without delected data is displaying.
+
+![Delete department](/image/delete_department.png)
+
+**Cancel operation scenario:**
+
+- User in display mode of department list and press "Delete" button;
+- Application displays confirmation dialog "Please confirm ";
+- User press "Cancel" button;
+- List of department without changes is displaying.
 
 
