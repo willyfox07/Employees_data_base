@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="216" y="128" width="777" height="617" text="Browser&#xA;http://..." measuredWidth="777" measuredHeight="617">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="2" x="328" y="328" width="115" text="Location" measuredWidth="115" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="3" x="216" y="226" width="273" height="69" text="Employees" measuredWidth="273" measuredHeight="69" background="#666">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="4" x="488" y="226" width="273" height="69" text="Departments" measuredWidth="273" measuredHeight="69" background="#ccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="5" x="216" y="180" width="777" height="47" text="Departments list" measuredWidth="777" measuredHeight="47" background="#ccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="7" x="216" y="376" width="89" height="33" text="Department" measuredWidth="89" measuredHeight="33" background="#ccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="9" x="304" y="376" width="153" height="33" text=" Number of employees" measuredWidth="153" measuredHeight="33" background="#ccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="10" x="456" y="376" width="89" height="33" text="Head" measuredWidth="89" measuredHeight="33" background="#ccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="12" x="544" y="376" width="89" height="33" text="Location" measuredWidth="89" measuredHeight="33" background="#ccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="13" x="216" y="408" width="89" height="33" measuredWidth="89" measuredHeight="33">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="14" x="304" y="408" width="153" height="33" measuredWidth="153" measuredHeight="33">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="15" x="456" y="408" width="89" height="33" measuredWidth="89" measuredHeight="33">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="17" x="544" y="408" width="89" height="33" measuredWidth="89" measuredHeight="33">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="18" x="240" y="448" text="......................" measuredWidth="23" measuredHeight="72" rotation="90">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="19" x="632" y="409" width="41" height="32" text="edit" measuredWidth="41" measuredHeight="32">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="20" x="672" y="409" width="41" height="32" text="delete" measuredWidth="41" measuredHeight="32">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="21" x="262" y="328" text="Sort by:" measuredWidth="48" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="22" x="632" y="364" width="81" height="45" text="Refresh" measuredWidth="81" measuredHeight="45" background="#6aa84f">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="23" x="864" y="237" width="97" height="47" text="Add " measuredWidth="97" measuredHeight="47" background="#93c47d">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="19" x="96" y="-48" width="777" height="617" text="Browser&#xA;http://..." measuredWidth="777" measuredHeight="617">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="23" x="427" y="152" width="115" text="departments" measuredWidth="115" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="26" x="96" y="50" width="273" height="69" text="Employees" measuredWidth="273" measuredHeight="69" background="#ccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="27" x="368" y="50" width="273" height="69" text="Departments" measuredWidth="273" measuredHeight="69" background="#666">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="28" x="96" y="4" width="777" height="47" text="Employees list" measuredWidth="777" measuredHeight="47" background="#ccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="30" x="176" y="152" text="Sort by:" measuredWidth="48" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="32" x="96" y="200" width="89" height="33" text="Name" measuredWidth="89" measuredHeight="33" background="#ccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:DateField" id="33" x="223" y="152" text="  01/05  /2015  " measuredWidth="114" measuredHeight="23"/>
+  <widgets xsi:type="model:Button" id="36" x="184" y="200" width="89" height="33" text="Surname" measuredWidth="89" measuredHeight="33" background="#ccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="37" x="272" y="200" width="89" height="33" text="Hiring date" measuredWidth="89" measuredHeight="33" background="#ccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="38" x="448" y="200" width="89" height="33" text="Department" measuredWidth="89" measuredHeight="33" background="#ccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="39" x="360" y="200" width="89" height="33" text="Position held" measuredWidth="89" measuredHeight="33" background="#ccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="40" x="96" y="232" width="89" height="33" text="Aliaksei " measuredWidth="89" measuredHeight="33">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="41" x="184" y="232" width="89" height="33" text="Strunets" measuredWidth="89" measuredHeight="33">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="42" x="272" y="232" width="89" height="33" text="01.09.2021" measuredWidth="89" measuredHeight="33">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="43" x="448" y="232" width="89" height="33" text="...." measuredWidth="89" measuredHeight="33">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="44" x="360" y="232" height="33" text="Programmer" measuredWidth="89" measuredHeight="33">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="45" x="120" y="272" text="......................" measuredWidth="23" measuredHeight="72" rotation="90">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="46" x="536" y="233" width="41" height="32" text="edit" measuredWidth="41" measuredHeight="32">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="47" x="576" y="233" width="41" height="32" text="delete" measuredWidth="41" measuredHeight="32">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="48" x="368" y="152" text="Sort by:" measuredWidth="48" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="49" x="536" y="188" width="81" height="45" text="Refresh" measuredWidth="81" measuredHeight="45" background="#6aa84f">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="50" x="744" y="61" width="97" height="47" text="Add " measuredWidth="97" measuredHeight="47" background="#93c47d">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler>
+    <guides position="708"/>
+    <guides position="743"/>
+    <guides position="691"/>
+  </vRuler>
+  <font size="12px"/>
+  <note>This the start screen that shows all the main parts of the *WireframeSketcher*'s user interface.
+
+You can find out more detailed information about each part by consulting the integrated help that can be opened using *F1*.
+
+This description in particular is a screen note that you can edit using the *Notes* view.</note>
+</model:Screen>
