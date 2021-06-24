@@ -117,7 +117,7 @@ When editing a employee, the following details are entered:
 - If error occurs, then error message displays;
 - If employee data is succesfully deleted, then list of employee without delected data is displaying. 
 
-![Edit employee](/home/alex/WireframeSketcher/wireframing-tutorial/delete_order.png)
+![Edit employee](/image/delete_order.png)
 
 **Cancel operation scenario:**
 
@@ -137,7 +137,7 @@ This mode is intended for viewing and editing the departments list.
 - User selects item "Departments";
 - Application displays list of employees;
 
-![Edit employee](/image/Departments.pdf)
+![Edit employee](/image/Departments.png)
 
 The list displays the following columns:
 
