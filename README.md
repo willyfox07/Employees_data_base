@@ -25,7 +25,7 @@ The mode is designed to view the list of employees.
 - User select item "Employees";
 - Application displays list of Employees.
 
-![Main menu](/home/alex/WireframeSketcher/wireframing-tutorial/Start.screen)
+![Main menu](/home/alex/pythonProject/image/start.html)
 Pic.1.1 View the list of employees.
 
 The list displays the following columns:
