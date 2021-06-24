@@ -25,7 +25,7 @@ The mode is designed to view the list of employees.
 - User select item "Employees";
 - Application displays list of Employees.
 
-![Main menu](/image/start.png)
+![Main menu](/image/Start.png)
 Pic.1.1 View the list of employees.
 
 The list displays the following columns:
@@ -60,7 +60,7 @@ Filtering by date:
 - Data don’t save in data base, then list of employees records is displaying to user.
 - If the user selects the menu item "EMployees”, ”Departments”, the data will not be saved to the database and the corresponding form with updated data will be opened.
 
-![Add employee](/image/add_employee.screen)
+![Add employee](/image/add_employee.png)
 
 When adding a employee, the following details are entered:
 
