@@ -25,7 +25,7 @@ The mode is designed to view the list of employees.
 - User select item "Employees";
 - Application displays list of Employees.
 
-![Main menu](/home/alex/pythonProject/image/start.html)
+![Main menu](/image/start.png)
 Pic.1.1 View the list of employees.
 
 The list displays the following columns:
@@ -60,7 +60,7 @@ Filtering by date:
 - Data don’t save in data base, then list of employees records is displaying to user.
 - If the user selects the menu item "EMployees”, ”Departments”, the data will not be saved to the database and the corresponding form with updated data will be opened.
 
-![Add employee](/home/alex/WireframeSketcher/wireframing-tutorial/add_employee.screen)
+![Add employee](/image/add_employee.screen)
 
 When adding a employee, the following details are entered:
 
@@ -88,7 +88,7 @@ When adding a employee, the following details are entered:
 - Data don’t save in data base, then list of employee records is displaying to user.
 - If the user selects the menu item "Employees”, ”Departments”, the data will not be saved to the database and the corresponding form with updated data will be opened.
 
-![Edit employee](/home/alex/WireframeSketcher/wireframing-tutorial/edit_employee.screen)
+![Edit employee](/image/edit_employee.png)
 
 When editing a employee, the following details are entered:
 
