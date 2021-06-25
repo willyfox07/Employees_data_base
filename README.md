@@ -226,5 +226,3 @@ This mode is intended for viewing and editing the departments list.
 - Application displays confirmation dialog "Please confirm ";
 - User press "Cancel" button;
 - List of department without changes is displaying.
-
-
