@@ -2,17 +2,17 @@
 
 ## Vision
 
-"Employee Manager" s a web application designed for the management of employees and departments with these employees.
+"Employee Manager" is a web application designed for the management of employees and departments with these employees.
 
-Applecation should provide:
+Application should provide:
 
 - Storing information about employees in a database;
 - Display list of employees;
 - Updating list of employees(adding,editing,removing);
 - Display list of departments;
-- Updating list of depatrments;
+- Updating list of depatrments(adding,editing,removing);
 - Filtering by departments for employees;
-- Filtering by hiring date for employees;
+- Filtering by date of birth for employees;
 
 ## 1.Employees
 
@@ -135,9 +135,9 @@ This mode is intended for viewing and editing the departments list.
 **Main scenario:**
 
 - User selects item "Departments";
-- Application displays list of employees;
+- Application displays list of departments;
 
-![Edit employee](/image/Departments.png)
+![Edit department](/image/Departments.png)
 
 **The list displays the following columns:**
 
@@ -150,6 +150,9 @@ This mode is intended for viewing and editing the departments list.
 
 - In the clients list view mode, the user sets a location filter and presses the refresh list button.
 
+**Filtering by number of employees:**
+
+- In the clients list view mode, the user sets  the range from minimum to maximum number of employees and presses the refresh list button.
 
 ### 2.2 Add department
 
@@ -216,7 +219,8 @@ This mode is intended for viewing and editing the departments list.
 - The user confirms the removal the department;
 - Record is delected from database;
 - If error occurs, then error message displays;
-- If department data is succesfully deleted, then list of department without delected data is displaying.
+- If department data is succesfully deleted, then list of department without delected data is displaying, also in list of employees all data about the remote department will be deleted.
+
 
 ![Delete department](/image/delete_department.png)
 
