@@ -32,9 +32,10 @@ Pic.1.1 View the list of employees.
 
 - Name - Name of employees;
 - Surname - Surname of employees;
-- Hiring date - date when employee was hired;
+- Date of birth - date when employee was born;
 - Position held - what position employee does;
-- Department - which department does the employee belong to.
+- Department - which department does the employee belong to;
+- Salary - what salary does the employee receive.
 
 **Filtering by date:**
 
@@ -75,9 +76,10 @@ Pic.1.1 View the list of employees.
 
 - Employee name;
 - Employee surname;
-- Hiring date - date when employee was hired;
+- Date of birth - date when employee was born;
 - Position held - what position employee does;
-- Department - which department does the employee belong to.
+- Department - which department does the employee belong to;
+- Salary - what salary does the employee receive.
 
 ### 1.3 Edit employee
 
@@ -111,17 +113,19 @@ Pic.1.1 View the list of employees.
 
 - Employee name;
 - Employee surname;
-- Hiring date - date when employee was hired;
+- Date of birth - date when employee was born;
 - Position held - what position employee does;
-- Department - which department does the employee belong to.
+- Department - which department does the employee belong to;
+- Salary - what salary does the employee receive.
 
 **Constrains for data validation:**
 
 - Employee name - maximum length of 90 characters;
 - Employee surname - maximum length of 90 characters;
-- Hiring date - format dd/mm/yyyy;
+- Date of birth - format dd/mm/yyyy;
 - Position held - maximum length of 90 characters;
-- Department - maximum length of 90 characters.
+- Department - maximum length of 90 characters;
+- Salary - maximum length of 40 characters. 
 
 ### 1.4 Removing employee
 
