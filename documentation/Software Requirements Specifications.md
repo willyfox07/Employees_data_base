@@ -41,6 +41,10 @@ Pic.1.1 View the list of employees.
 
 - In the list of employees mode, the user sets a date filter and presses the refresh list button
 
+**Filtering by data**
+
+- In the list of employees mode, the user sets a da
+
 ### 1.2 Add employee
 
 **Mais scenario:**
@@ -103,7 +107,7 @@ Pic.1.1 View the list of employees.
 
 - User clicks the “Edit” button in the employee list view mode;
 - Application displays form to enter employee data;
-- User enters employee data and presses “Cancel” button;
+- User update employee data and presses “Cancel” button;
 - Data don’t save in data base, then list of employee records is displaying to user.
 - If the user selects the menu item "Employees”, ”Departments”, the data will not be saved to the database and the corresponding form with updated data will be opened.
 
@@ -131,14 +135,13 @@ Pic.1.1 View the list of employees.
 
 **Main scenario:**
 
-- The user, while in the list of employees, presses the "Delete" button in the selected employee line;
-- If the employee can be removed, a confirmation dialog is displayed;
+- The user, while in the list of employees, presses the "Delete" button in the selected employee line, a confirmation dialog is displayed;
 - The user confirms the removal the employee;
 - Record is delected from database;
 - If error occurs, then error message displays;
 - If employee data is succesfully deleted, then list of employee without delected data is displaying.
 
-![Edit employee](/documentation/image/delete_order.png)
+![Edit employee](/documentation/image/delete_employee.png)
 
 **Cancel operation scenario:**
 
@@ -158,7 +161,7 @@ This mode is intended for viewing and editing the departments list.
 - User selects item "Departments";
 - Application displays list of departments;
 
-![Edit department](/documentation/image/Departments.png)
+![Edit department](/documentation/image/Department.png)
 
 **The list displays the following columns:**
 
@@ -195,7 +198,7 @@ This mode is intended for viewing and editing the departments list.
 - Data don’t save in data base, then list of department records is displaying to user.
 - If the user selects the menu item "Employees”, ”Departments”, the data will not be saved to the database and the corresponding form with updated data will be opened.
 
-![add department](/documentation/image/add_department.png)
+![add department](/documentation/image/add_departments.png)
 
 **Add error scenario:**
 
@@ -238,7 +241,7 @@ This mode is intended for viewing and editing the departments list.
 - Data don’t save in data base, then list of department records is displaying to user.
 - If the user selects the menu item "Employees”, ”Departments”, the data will not be saved to the database and the corresponding form with updated data will be opened.
 
-![Edit department](/documentation/image/edit_department.png)
+![Edit department](/documentation/image/edit_departments.png)
 
 **Edit error scenario:**
 
