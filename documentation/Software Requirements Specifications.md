@@ -188,6 +188,14 @@ This mode is intended for viewing and editing the departments list.
 **Filtering by number of employees:**
 
 - In the clients list view mode, the user sets  the range from minimum to maximum number of employees and presses the refresh list button.
+- If user sets a date only in cell - *Sort from:*, then application showed data about departments only with due date, if user sets a date also in the next cell - *by:*, then application show data about departments up to this date; 
+- If user sets a date only in cell -*by:*, then filter won't work;
+- The application will display a form to view the list of departments with updated data.
+
+**Show all**
+
+- In the list of departments mode, the user presses button *Show all*;
+- The application will display a form to view the list of departments about all data.
 
 ### 2.2 Add department
 
