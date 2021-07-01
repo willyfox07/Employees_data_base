@@ -39,11 +39,19 @@ Pic.1.1 View the list of employees.
 
 **Filtering by date:**
 
-- In the list of employees mode, the user sets a date filter and presses the refresh list button
+- In the list of employees mode, the user sets a date filter and presses the refresh list button;
+- If user sets a date only in cell - *Sort from:*, then application showed data about employees only with due date, if user sets a date also in the next cell - *by:*, then application show data about employees up to this date; 
+- If user sets a date only in cell -*by:*, then filter won't work;
+- The application will display a form to view the list of employees with updated data.
 
-**Filtering by data**
+**Filtering by departments:**
+- In the list of employees mode, the user sets a departments filter and presses the refresh list button;
+- The application will display a form to view the list of employees with updated data.
 
-- In the list of employees mode, the user sets a da
+**Show all**
+
+- In the list of employees mode, the user presses button *Show all*;
+- The application will display a form to view the list of employees about all data.
 
 ### 1.2 Add employee
 
@@ -91,9 +99,12 @@ Pic.1.1 View the list of employees.
 
 - User clicks the "Edit" button in the employee list view mode;
 - Application displays form to enter employee data;
-- User enters employee data and presses "Cancel" button;
-- Data don't save in data base, then list of employees records is displaying to user;
-- If the user select the menu item "Employees", "Departments", the data will not be saved to the database and the corresponding form with updated data will be opened.
+- User redact employee data and presses "Save" button;
+- Data is saved in data base, then list of employees records is displaying to user;
+- If the user select the menu item "Employees", "Departments", "Cancel", the data will not be saved to the database and the corresponding form with updated data will be opened.
+
+
+![Edit employee](/documentation/image/edit_employee.png)
 
 **Edit error scenario:**
 
@@ -111,7 +122,6 @@ Pic.1.1 View the list of employees.
 - Data don’t save in data base, then list of employee records is displaying to user.
 - If the user selects the menu item "Employees”, ”Departments”, the data will not be saved to the database and the corresponding form with updated data will be opened.
 
-![Edit employee](/documentation/image/edit_employee.png)
 
 **When editing a employee, the following details are entered:**
 
@@ -169,6 +179,7 @@ This mode is intended for viewing and editing the departments list.
 - The number of employees - how mane employees in this dapetment;
 - Head - head of department;
 - Location - where this department located.
+- Average salary - the average salary among the employees of the department
 
 **Filtering by location:**
 
@@ -214,7 +225,8 @@ This mode is intended for viewing and editing the departments list.
 - Department;
 - Number of employees - how many people work in the department;
 - Head -  head of department;
-- Location - where this department located.
+- Location - where this department located;
+- Average salary - the average salary among the employees of the department.
 
 **Constrains for data validation:**
 
@@ -222,6 +234,7 @@ This mode is intended for viewing and editing the departments list.
 - Number of employees - maximum length for 30 characters;
 - Head - maximum length for 45 characters;
 - Location - maximum length for 45 characters;
+- Average salary - maximum length for 45 characters.
 
 ### 2.3 Edit department
 
@@ -229,9 +242,9 @@ This mode is intended for viewing and editing the departments list.
 
 - User clicks the "Edit" button in the department list view mode;
 - Application displays form to enter department data;
-- User enters department data and presses "Cancel" button;
-- Data don't save in data base, then list of department records is displaying to user;
-- If the user select the menu item "Employees", "Departments", the data will not be saved to the database and the corresponding form with updated data will be opened.
+- User redact department data and presses "Save" button;
+- Data is saved in data base, then list of department records is displaying to user;
+- If the user select the menu item "Employees", "Departments", "Cancel", the data will not be saved to the database and the corresponding form with updated data will be opened.
 
 **Cancel operation scenario:**
 
