@@ -231,18 +231,14 @@ This mode is intended for viewing and editing the departments list.
 **When adding a department, the following details are entered:**
 
 - Department;
-- Number of employees - how many people work in the department;
 - Head -  head of department;
 - Location - where this department located;
-- Average salary - the average salary among the employees of the department.
 
 **Constrains for data validation:**
 
 - Department - maximum length for 45 characters;
-- Number of employees - maximum length for 30 characters;
-- Head - maximum length for 45 characters;
+- Head - is selected from the options existing in the database
 - Location - maximum length for 45 characters;
-- Average salary - maximum length for 45 characters.
 
 ### 2.3 Edit department
 
