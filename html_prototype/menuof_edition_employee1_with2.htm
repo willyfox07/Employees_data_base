@@ -1,0 +1,73 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<title>Add_employees</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<header >
+		<div class="header_add">
+			<label>Add data</label>
+		</div>
+	</header>
+	<form  action="edit_employee1_with2.htm">
+		<div class="grid_container">		
+			<div class="grid_item">
+				<label >Employee name:</label>
+			</div>
+			<div class="grid_item">
+				<input type="text" id="Name" name="Name" value="Aliaksei" >
+			</div>
+			<div class="grid_item">
+				<label >Employee surname:</label>
+			</div>
+			<div class="grid_item">
+				<input type="text" id="Surname" name="Surname" value="Strunets" >
+			</div>
+			<div class="grid_item">
+				<label >Date of birth:</label>
+			</div>
+			<div class="grid_item">
+				<input type="Date" id="Date_of_birth" name="Date of birth" value="01.09.2021"  >
+			</div>
+			<div class="grid_item">
+				<label>Position held:</label>
+			</div>
+			<div class="grid_item">
+				<input type="text" id="Position_held" name="Position_held" value="Programmer">
+			</div>
+			<div class="grid_item">
+				<label>Salary:</label>
+			</div>
+			<div class="grid_item">
+				<input type="text" id="Salary" name="Salary" value="700">
+			</div>
+			<div class="grid_item">
+				<label for="Department">Department:</label>
+			</div>
+			<div class="grid_item">
+				<select id="Department" name="Department">
+					<option value="All departments">All departments</option>
+					<option value="Enterprise software department">Enterprise software department</option>
+					<option value="Testing">Testing</option>
+					<option value="Support">Support</option>
+				</select>
+			</div>
+			<div class="grid_item" >
+				<form action="after_adding_employee.htm">
+					<button class="navigation_button" id="add_cancel_button">Cancel</button>
+				</form>
+			
+			</div>
+			<div class="grid_item" >
+					 <button type="submit" class="navigation_button"   
+				   >Save</button> 			
+				
+			</div>	
+		</div>
+	</form>
+		
+		
+</body>
