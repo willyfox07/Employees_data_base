@@ -12,7 +12,21 @@
 			<label>Add data</label>
 		</div>
 	</header>
-	<form  action="employees_list.htm">
+	<form  action="after_adding_employee3.html" ;>
+		<nav>
+			<ul class="navigation_bar" >
+			<li><a class="navigation_button" href="after_adding_employee.html">Employees</a></li>
+			<li><a class="navigation_button" href="department_list.html">Departments</a></li>
+			<li>
+				<button type="submit" class="navigation_button"id="add_save_button" onclick="" alert(document.getElementById("Department").value;add_tr"   
+				>Save</button> 			
+			</li>
+			<li>
+				<li><<a class="navigation_button" id="add_cancel_button"  href="after_delete_employee3.html">Cancel</a></li>
+			</li>
+			
+ 		 </ul>
+		</nav>
 		<div class="grid_container">		
 			<div class="grid_item">
 				<label >Employee name:</label>
@@ -30,19 +44,19 @@
 				<label >Date of birth:</label>
 			</div>
 			<div class="grid_item">
-				<input type="Date" id="Date_of_birth" name="Date of birth" >
+				<input type="Date" id="Date_of_birth" name="Date of birth"  >
 			</div>
 			<div class="grid_item">
 				<label>Position held:</label>
 			</div>
 			<div class="grid_item">
-				<input type="text" id="Position_held" name="Position_held">
+				<input type="text" id="Position_held" name="Position_held" >
 			</div>
 			<div class="grid_item">
 				<label>Salary:</label>
 			</div>
 			<div class="grid_item">
-				<input type="text" id="Salary" name="Salary">
+				<input type="text" id="Salary" name="Salary" >
 			</div>
 			<div class="grid_item">
 				<label for="Department">Department:</label>
@@ -54,41 +68,9 @@
 					<option value="Testing">Testing</option>
 					<option value="Support">Support</option>
 				</select>
-			</div>
-			<div class="grid_item" >
-				<form action="employees_list.htm">
-					<button class="navigation_button" id="add_cancel_button">Cancel</button>
-				</form>
-			
-			</div>
-			<div class="grid_item" >
-				 <button type="submit" class="navigation_button"   onclick="alert(document.getElementById("Department").value;add_tr" >Save</button> 
-				
-			</div>	
+			</div>		
 		</div>
 	</form>
 		
 		
 </body>
-
-<script type="text/javascript">
-	/*document.getElementById("save_Button").onclick = append_row();
-
-function append_row() {
-  var row = document.createElement("tr");
-
-  var tdNumer = document.createElement("td");
-  var val1 = document.getElementById("Name").value;
-  tdNumer.innerHTML = val1;
-
-  var tdText = document.createElement("td");
-  var val2 = document.getElementById("Surname").value;
-  tdText.innerHTML = val2;
-
-  row.appendChild(tdNumer);
-  row.appendChild(tdText);
-  var append = document.getElementById("zen");
-  append.appendChild(row);
-
-}*/
-</script>

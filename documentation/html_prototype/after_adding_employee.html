@@ -9,15 +9,16 @@
 <body>
 	<nav>
 		<ul class="navigation_bar" >
-			<li><a class="navigation_button" href="employees_list.htm">Employees</a></li>
-			<li><a class="navigation_button" href="department_list.htm">Departments</a></li>
-			<li><a class="navigation_button" href="add_employee.htm" id="add_Button">Add</a></li>
+			<li><a class="navigation_button" href="employees_list.html">Employees</a></li>
+			<li><a class="navigation_button" href="department_list.html">Departments</a></li>
+			<li><a class="navigation_button" href="add_employee3.html" id="add_Button">Add</a></li>
  		 </ul>
 	</nav>
 	<label class="employee_filter" for="begin_date">Sort from:</label>
 	<input type="date" id="begin_date" name="begin_date">
 	<label class="employee_filter" for = "last_date">by:</label>
 	<input type="date" id="last_date" name="last_date"> 
+	<button class="show_All_Button" id="show_all" >Show all</button>
 	<label class="employee_filter" for="sort_departments">Select department:</label>
 	<select id="sort_departments">
 		<option value="All departments">All departments</option>
@@ -34,7 +35,7 @@
 			<th>Position held</th>
 			<th>Salary</th>
 			<th>Department</th>
-			<th class="button_row"><button id="refresh" class="refresh_Button" >Refresh</button></th>
+			<th class="button_row" colspan="2"><button id="refresh" class="refresh_Button" >Refresh</button></th>
 		</tr>
 
 		<tr>
@@ -44,11 +45,11 @@
 			<td>Programmer</td>
 			<td>700</td>
 			<td>Enterprise Software Development</td>
-			<form action="menuof_edition_employee1_with2.htm">
+			<form action="menuof_edition_employee1_with2.html">
 				<td class="button_row"><button class="edit_Button">Edit</button></td>
 			</form>
-			<form action="employees_list.htm">
-				<td><button  class="delete_Button" >Delete</button></td>
+			<form action="employees_list.html">
+				<td class="button_row"><button  class="delete_Button" >Delete</button></td>
 			</form>
 			
 		</tr>
@@ -60,18 +61,18 @@
 			<td><output id="input_Position2"></output></td>
 			<td><output id="input_Salary2"></output></td>
 			<td><output id="input_Department2"></output></td>
-			<form action="edit_employee2.htm">
+			<form action="edit_employee2.html">
 				<td class="button_row"><button class="edit_Button">Edit</button></td>
 			</form>
-			<form action="employees_list.htm">
-				<td><button  class="delete_Button" >Delete</button></td>
+			<form action="employees_list.html">
+				<td class="button_row"><button  class="delete_Button" >Delete</button></td>
 			</form>
 		</tr>
 
 		</tbody>
+	
 		
 </body>
-
 <script type="text/javascript">
 	input_Name2.value=(location.search.split("&")[0]).split("=")[1]
 	input_Surname2.value=(location.search.split("&")[1]).split("=")[1]

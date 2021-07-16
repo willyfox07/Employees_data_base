@@ -12,37 +12,51 @@
 			<label>Add data</label>
 		</div>
 	</header>
-	<form  action="after_adding_employee.htm" ;>
+	<form  action="after_edition_employee2.html">
+		<nav>
+			<ul class="navigation_bar" >
+			<li><a class="navigation_button" href="employees_list.html">Employees</a></li>
+			<li><a class="navigation_button" href="department_list.html">Departments</a></li>
+			<li>
+				<button type="submit" class="navigation_button"id="add_save_button" onclick="" alert(document.getElementById("Department").value;add_tr"   
+				>Save</button> 			
+			</li>
+			<li>
+				<li><<a class="navigation_button" id="add_cancel_button"  href="employees_list.html">Cancel</a></li>
+			</li>
+			
+ 		 </ul>
+		</nav>
 		<div class="grid_container">		
 			<div class="grid_item">
 				<label >Employee name:</label>
 			</div>
 			<div class="grid_item">
-				<input type="text" id="Name" name="Name"  >
+				<input type="text" id="Name" name="Name" value="Sergey" >
 			</div>
 			<div class="grid_item">
 				<label >Employee surname:</label>
 			</div>
 			<div class="grid_item">
-				<input type="text" id="Surname" name="Surname"  >
+				<input type="text" id="Surname" name="Surname" value=" Simonov" >
 			</div>
 			<div class="grid_item">
 				<label >Date of birth:</label>
 			</div>
 			<div class="grid_item">
-				<input type="Date" id="Date_of_birth" name="Date of birth"  >
+				<input type="Date" id="Date_of_birth" name="Date of birth" value="09.07.1990" >
 			</div>
 			<div class="grid_item">
 				<label>Position held:</label>
 			</div>
 			<div class="grid_item">
-				<input type="text" id="Position_held" name="Position_held" >
+				<input type="text" id="Position_held" name="Position_held" value="Programmer">
 			</div>
 			<div class="grid_item">
 				<label>Salary:</label>
 			</div>
 			<div class="grid_item">
-				<input type="text" id="Salary" name="Salary" >
+				<input type="text" id="Salary" name="Salary" value="2000">
 			</div>
 			<div class="grid_item">
 				<label for="Department">Department:</label>
@@ -55,18 +69,7 @@
 					<option value="Support">Support</option>
 				</select>
 			</div>
-			<div class="grid_item" >
-				<form action="employees_list.htm">
-					<button class="navigation_button" id="add_cancel_button">Cancel</button>
-				</form>
 			
-			</div>
-			<div class="grid_item" >
-				
-					 <button type="submit" class="navigation_button" onclick="" alert(document.getElementById("Department").value;add_tr"   
-				   >Save</button> 			
-			</div>	
-		</div>
 	</form>
 		
 		

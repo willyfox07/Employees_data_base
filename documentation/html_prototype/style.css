@@ -66,8 +66,8 @@ body {
 	text-align: center;
 	border-width: 1px;
 	border-color: black;
-	width: 111px;
-	height: 85px;
+	width: 100% ;
+	height: 115px;
 	color: white;
 	background-color: #FF4500;
 	cursor: pointer;
@@ -101,7 +101,7 @@ body {
 	text-align: center;
 	border-width: 1px;
 	border-color: black;
-	width: 111px;
+	width: 100%;
 	height: 50px;
 	color: white;
 	background-color: #66CDAA;
@@ -119,6 +119,22 @@ th{
 
 .button_row{
 	padding: 0px;
+	width: 100px;
+}
+
+.show_All_Button{
+position: relative;
+text-align: center;
+border-width: 1px;
+border-color: black;
+cursor: pointer;
+color: white;
+background-color: #66CDAA;
+height: 24px;
+}
+
+.show_All_Button:hover{
+	background-color: #00BFFF;
 }
 
 .grid_container{
@@ -137,8 +153,11 @@ th{
 
 #add_cancel_button{
 	background-color: #B22222  ;
-	color: white;;
-	padding-bottom: 46px;
+	color: white;
+	height:32px;
+	border-width: 1px;
+	border-color: black;
+	float: right;
 }
 
 #add_cancel_button:hover{
@@ -147,8 +166,10 @@ th{
 
 #add_save_button{
 	background-color:#008000 ;
-	padding-bottom: 46px;
+	height: 100px;
 	color: white;
+	border-color: black;
+	float: right;
 }
 
 #add_save_button:hover{
@@ -164,3 +185,4 @@ th{
 	padding-top: 20px;
 	width: 100%;
 }
+
