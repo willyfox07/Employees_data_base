@@ -14,7 +14,6 @@
 			<li><a class="navigation_button" href="add_department2.html" id="add_Button">Add</a></li>
  		 </ul>
 	</nav>
-	<form action="show_all_department.html">
 	<label class="employee_filter" for="Location">Sort by:</label>
 	<select id="Location">
 		<option value="Location">Location</option>
@@ -26,9 +25,7 @@
 	<input type="text" id="Min.number" name="Min.number of employees"> 
 	<label class="employee_filter" for="Max.number">by:</label>
 	<input type="text" id="Max.number" name="Max.number of employees"> 
-		<button class="show_All_Button" id="show_all"  >Show all</button>
-	</form>
-	
+	<button class="show_All_Button" id="show_all" >Show all</button>
 	
 	
 	<table id="zen" class="table_employees">
@@ -43,14 +40,14 @@
 				<form action="department_list.html">
 					<button id="refresh" class="refresh_Button" >Refresh</button>
 				</form>
-			</th>	
+			</th>
 		</tr>
 
 		<tr>		
-			<td>Enterprise Software</td>
+			<td><output id="input_Name2"></output></td>
 			<td>40</td>
-			<td>Aliaksei Strunets</td>
-			<td>Brest office</td>
+			<td><output id="input_Date2"></output></td>
+			<td><output id="input_Position2"></output></td>
 			<td>600</td>
 
 			<form action="edit_department1_with2.html">
@@ -62,12 +59,11 @@
 		</tr>
 
 		<tr>		
-			<td><output id="input_Name2"></output></td>
-			<td>40</td>
-			<td><output id="input_Date2"></output></td>
-			<td><output id="input_Position2"></output></td>
-			<td>600</td>
-
+			<td>Testing</td>
+			<td>60</td>
+			<td>Ihar Nauros</td>
+			<td>Minsk</td>
+			<td>800</td>
 			<form action="edit_department2.html">
 				<td class="button_row"><button class="edit_Button">Edit</button></td>
 			</form>

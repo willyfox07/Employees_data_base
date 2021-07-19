@@ -11,7 +11,7 @@
 		<ul class="navigation_bar" >
 			<li><a class="navigation_button" href="employees_list.html">Employees</a></li>
 			<li><a class="navigation_button" href="department_list.html">Departments</a></li>
-			<li><a class="navigation_button" href="add_employee.html" id="add_Button">Add</a></li>
+			<li><a class="navigation_button" href="add_employee3.html" id="add_Button">Add</a></li>
  		 </ul>
 	</nav>
 	<form action="show_all_employees.html">
@@ -38,38 +38,58 @@
 			<th>Salary</th>
 			<th>Department</th>
 			<th class="button_row" colspan="2">
-				<form action="employees_list.html">
+				<form action="after_delete_employee3.html">
 					<button id="refresh" class="refresh_Button" >Refresh</button>
 				</form>
 			</th>
 		</tr>
 
 		<tr>
-		<td><output id="input_Name"></output></td>
-			<td><output id="input_Surname"></output></td>
-			<td><output id="input_Date"></output></td>
-			<td><output id="input_Position"></output></td>
-			<td><output id="input_Salary"></output></td>
-			<td><output id="input_Department"></output></td>
-			<form action="edit_employee1.html">
+			<td>Aliaksei</td>
+			<td>Strunets</td>
+			<td>01.09.2021</td>
+			<td>Programmer</td>
+			<td>700</td>
+			<td>Enterprise Software Development</td>
+			<form action="menuof_edition_employee1_with2.html">
 				<td class="button_row"><button class="edit_Button">Edit</button></td>
 			</form>
-			<form action="delete_employee1.html">
-				<td class="button_row"><button id="2021" class="delete_Button" >Delete</button></td>
-			</form>			
+			<form action="employees_list.html">
+				<td class="button_row"><button  class="delete_Button" >Delete</button></td>
+			</form>
+			
 		</tr>
 		<tr>
+				<td>Sergei</td>
+			<td>Simonov</td>
+			<td>07.01.2000</td>
+			<td>Programmer</td>
+			<td>1000</td>
+			<td>Enterprise Software Development</td>
+			<form action="edit_employee3.html">
+				<td class="button_row"><button class="edit_Button">Edit</button></td>
+			</form>
+			<form action="after_delete_employee3.html">
+				<td class="button_row"><button  class="delete_Button" >Delete</button></td>
+			</form>
+			
+		</tr>
 
+		<tr>
+			<td>Andrei</td>
+			<td>Smirnov</td>
+			<td>16.09.1985</td>
+			<td>Programmer</td>
+			<td>1200</td>
+			<td>Testing</td>
+			<form action="edit_employee3.html">
+				<td class="button_row"><button class="edit_Button">Edit</button></td>
+			</form>
+			<form action="after_delete_employee3.html">
+				<td class="button_row"><button  class="delete_Button" >Delete</button></td>
+			</form>
 		</tr>
 
 		</tbody>
+		
 </body>
-
-<script type="text/javascript">
-	input_Name.value=(location.search.split("&")[0]).split("=")[1]
-	input_Surname.value=(location.search.split("&")[1]).split("=")[1]
-	input_Date.value=(location.search.split("&")[2]).split("=")[1]
-	input_Position.value=(location.search.split("&")[3]).split("=")[1]
-	input_Salary.value=(location.search.split("&")[4]).split("=")[1]
-	input_Department.value=(location.search.split("&")[5]).split("=")[1]
-</script>

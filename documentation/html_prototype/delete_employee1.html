@@ -14,11 +14,12 @@
 			<li><a class="navigation_button" href="add_employee1.html" id="add_Button">Add</a></li>
  		 </ul>
 	</nav>
+	<form action="show_all_employees.html">
 	<label class="employee_filter" for="begin_date">Sort from:</label>
 	<input type="date" id="begin_date" name="begin_date">
 	<label class="employee_filter" for = "last_date">by:</label>
 	<input type="date" id="last_date" name="last_date"> 
-		<button class="show_All_Button" id="show_all" >Show all</button>
+	<button class="show_All_Button" id="show_all" >Show all</button>
 	<label class="employee_filter" for="sort_departments">Select department:</label>
 	<select id="sort_departments">
 		<option value="All departments">All departments</option>
@@ -26,6 +27,7 @@
 		<option value="Testing">Testing</option>
 		<option value="Support">Support</option>
 	</select>
+	</form>
 	<table id="zen" class="table_employees">
 		<tbody >
 			<tr class="table_employees">

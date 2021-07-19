@@ -14,11 +14,12 @@
 			<li><a class="navigation_button" href="add_employee3.html" id="add_Button">Add</a></li>
  		 </ul>
 	</nav>
+	<form action="show_all_employees.html">
 	<label class="employee_filter" for="begin_date">Sort from:</label>
 	<input type="date" id="begin_date" name="begin_date">
 	<label class="employee_filter" for = "last_date">by:</label>
 	<input type="date" id="last_date" name="last_date"> 
-		<button class="show_All_Button" id="show_all" >Show all</button>
+	<button class="show_All_Button" id="show_all" >Show all</button>
 	<label class="employee_filter" for="sort_departments">Select department:</label>
 	<select id="sort_departments">
 		<option value="All departments">All departments</option>
@@ -26,6 +27,7 @@
 		<option value="Testing">Testing</option>
 		<option value="Support">Support</option>
 	</select>
+	</form>	
 	<table id="zen" class="table_employees">
 		<tbody >
 			<tr class="table_employees">
@@ -35,7 +37,11 @@
 			<th>Position held</th>
 			<th>Salary</th>
 			<th>Department</th>
-			<th class="button_row" colspan="2"><button id="refresh" class="refresh_Button" >Refresh</button></th>
+			<th class="button_row" colspan="2">
+				<form action="after_delete_employee3.html">
+					<button id="refresh" class="refresh_Button" >Refresh</button>
+				</form>
+			</th>
 		</tr>
 
 		<tr>
@@ -56,7 +62,7 @@
 		<tr>
 				<td>Sergei</td>
 			<td>Simonov</td>
-			<td>01.09.2021</td>
+			<td>07.01.2000</td>
 			<td>Programmer</td>
 			<td>1000</td>
 			<td>Enterprise Software Development</td>
@@ -94,6 +100,4 @@
 	input_Position2.value=(location.search.split("&")[3]).split("=")[1]
 	input_Salary2.value=(location.search.split("&")[4]).split("=")[1]
 	input_Department2.value=(location.search.split("&")[5]).split("=")[1]
-
-
 </script>
