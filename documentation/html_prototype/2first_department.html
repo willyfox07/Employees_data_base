@@ -1,0 +1,139 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<title>Department list</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<nav>
+		<ul class="navigation_bar" >
+			<li><a class="navigation_button" href="employees_list.html">Employees</a></li>
+			<li><a class="navigation_button" href="department_list.html">Departments</a></li>
+			<li><a class="navigation_button" href="add_department3.html" id="add_Button">Add</a></li>
+ 		 </ul>
+	</nav>
+		<form action="show_all_department.html">
+	<label class="employee_filter" for="Location">Sort by:</label>
+	<select id="Location">
+		<option value="Location" hidden="">Location</option>
+		<option value="Brest">Brest</option>
+		<option value="Minsk">Minsk</option>
+		<option value="Gomel">Gomel</option>
+	</select>
+	<label class="employee_filter" for = "Min.number">Sort from:</label>
+	<input type="text" id="Min.number" name="Min.number of employees" placeholder="Min.number of employees"> 
+	<label class="employee_filter" for="Max.number">by:</label>
+	<input type="text" id="Max.number" name="Max.number of employees" placeholder="Max.number of employees" onkeyup="filter_number()"> 
+	<button class="show_All_Button" id="show_all" >Show all</button>
+	</form>
+	
+	<table id="zen" class="table_employees">
+		<tbody >
+			<tr class="table_employees">
+			<th>Department</th>
+			<th>Number of employees</th>
+			<th>Head</th>
+			<th>Location</th>
+			<th>Average salary</th>
+			<th class="button_row" colspan="2">
+					<button id="refresh" class="refresh_Button" onclick="filter()" >Refresh</button>			
+			</th>
+		</tr>
+
+		<tr>		
+			<td>Enterprise Software</td>
+			<td>40</td>
+			<td>Aliaksei Strunets</td>
+			<td>Brest office</td>
+			<td>600</td>
+
+			<form action="edit_department1_with2.html">
+				<td class="button_row"><button class="edit_Button">Edit</button></td>
+			</form>
+			<form action="delete_department1.html">
+				<td class="button_row"><button id="2021" class="delete_Button" >Delete</button></td>
+			</form>
+		</tr>
+
+		<tr>		
+			<td>Testing</td>
+			<td>60</td>
+			<td>Ihar Nauros</td>
+			<td>Minsk</td>
+			<td>800</td>
+			<form action="edit_department2.html">
+				<td class="button_row"><button class="edit_Button">Edit</button></td>
+			</form>
+			<form action="department_list.html">
+				<td class="button_row"><button id="2021" class="delete_Button" >Delete</button></td>
+			</form>
+		</tr>
+
+		</tbody>
+	
+</body>
+<script type="text/javascript">
+	function filter(argument) {
+	var  min_number, table, location, tr, td , i, td2, input, j;
+	location = document.getElementById("Location");
+
+	input = location.value.toUpperCase();
+	table = document.getElementById("zen");
+  tr = table.getElementsByTagName("tr");
+
+	for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[3];
+    td2 = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(input) > -1) {
+        tr[i].style.display = "";
+    }
+      else{
+      	tr[i].style.display = "none";
+      }
+    	
+    }
+  
+  }
+}
+function filter_number(argument) {
+		min_number = document.getElementById("Min.number").value;
+	max_number = document.getElementById("Max.number").value;
+		table = document.getElementById("zen");
+  tr = table.getElementsByTagName("tr");
+	for (i = 0; i < tr.length; i++){
+		td = tr[i].getElementsByTagName("td")[1];
+		if(td){
+			if(min_number >4 && max_number < 40){
+    		tr[1].style.display = "none";
+    		tr[2].style.display = "none";
+    	}
+    	if(max_number < 5){
+    		tr[1].style.display = "none";
+    		tr[2].style.display = "none";
+    		tr[3].style.display = "none";
+    	}
+    	if(min_number > 5 && max_number <1000){
+    		tr[3].style.display = "none";
+    	}
+    	if(min_number >40 && max_number <1000){
+    		tr[1].style.display = "none";
+    		tr[3].style.display = "none";
+    	}
+    	if(min_number > 5 && max_number <40){
+    		tr[1].style.display = "none";
+    		tr[2].style.display = "none";
+    		tr[3].style.display = "none";
+    	}
+    	if(min_number > 40 && max_number < 60){
+    		tr[1].style.display = "none";
+    		tr[2].style.display = "none";
+    		tr[3].style.display = "none";
+    	}
+
+		}
+	}
+}
+</script>

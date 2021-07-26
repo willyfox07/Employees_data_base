@@ -1,0 +1,47 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<title>Delete_department1</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<nav>
+		<ul class="navigation_bar" >
+			<li><a class="navigation_button" href="employees_list.html">Employees</a></li>
+			<li><a class="navigation_button" href="department_list.html">Departments</a></li>
+			<li><a class="navigation_button" href="add_department1.html" id="add_Button">Add</a></li>
+ 		 </ul>
+	</nav>
+	<form action="show_all_department.html">
+	<label class="employee_filter" for="Location">Sort by:</label>
+	<select id="Location">
+		<option value="Location" hidden="">Location</option>
+		<option value="Brest">Brest</option>
+		<option value="Minsk">Minsk</option>
+		<option value="Gomel">Gomel</option>
+	</select>
+	<label class="employee_filter" for = "Min.number">Sort from:</label>
+	<input type="text" id="Min.number" name="Min.number of employees" placeholder="Min.number of employees"> 
+	<label class="employee_filter" for="Max.number">by:</label>
+	<input type="text" id="Max.number" name="Max.number of employees" placeholder="Max.number of employees"> 
+	
+		<button class="show_All_Button" id="show_all_department.html" >Show all</button>
+	</form>
+	
+	
+	<table id="zen" class="table_employees">
+		<tbody >
+			<tr class="table_employees">
+			<th>Department</th>
+			<th>Number of employees</th>
+			<th>Head</th>
+			<th>Location</th>
+			<th>Average salary</th>
+			<th class="button_row" colspan="2"><button id="refresh" class="refresh_Button" >Refresh</button></th>
+		</tr>
+
+		</tbody>
+	
+</body>

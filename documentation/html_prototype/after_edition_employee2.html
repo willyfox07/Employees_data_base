@@ -1,0 +1,91 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<title>Employees list</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<nav>
+		<ul class="navigation_bar" >
+			<li><a class="navigation_button" href="employees_list.html">Employees</a></li>
+			<li><a class="navigation_button" href="department_list.html">Departments</a></li>
+			<li><a class="navigation_button" href="add_employee3.html" id="add_Button">Add</a></li>
+ 		 </ul>
+	</nav>
+	<form action="show_all_employees.html">
+	<label class="employee_filter" for="begin_date">Sort from:</label>
+	<input type="date" id="begin_date" name="begin_date">
+	<label class="employee_filter" for = "last_date">by:</label>
+	<input type="date" id="last_date" name="last_date"> 
+	<button class="show_All_Button" id="show_all" >Show all</button>
+	<label class="employee_filter" for="sort_departments">Select department:</label>
+	<select id="sort_departments">
+		<option value="All departments">All departments</option>
+		<option value="Enterprise software department">Enterprise software department</option>
+		<option value="Testing">Testing</option>
+		<option value="Support">Support</option>
+	</select>
+	</form>
+	<table id="zen" class="table_employees">
+		<tbody >
+			<tr class="table_employees">
+			<th>Name</th>
+			<th>Surname</th>
+			<th>Date of birth</th>
+			<th>Position held</th>
+			<th>Salary</th>
+			<th>Department</th>
+			<th class="button_row" colspan="2">
+				<form action="after_delete_employee3.html">
+					<button id="refresh" class="refresh_Button" >Refresh</button>
+				</form>
+			</th>
+		</tr>
+
+		<tr>
+			<td>Aliaksei</td>
+			<td>Strunets</td>
+			<td>01.09.2021</td>
+			<td>Programmer</td>
+			<td>700</td>
+			<td>Enterprise Software Development</td>
+			<form action="menuof_edition_employee1_with2.html">
+				<td class="button_row"><button class="edit_Button">Edit</button></td>
+			</form>
+			<form action="employees_list.html">
+				<td class="button_row"><button  class="delete_Button" >Delete</button></td>
+			</form>
+			
+		</tr>
+
+		<tr>
+			<td><output id="input_Name2"></output></td>
+			<td><output id="input_Surname2"></output></td>
+			<td><output id="input_Date2"></output></td>
+			<td><output id="input_Position2"></output></td>
+			<td><output id="input_Salary2"></output></td>
+			<td><output id="input_Department2"></output></td>
+			<form action="edit_employee2.html">
+				<td class="button_row"><button class="edit_Button">Edit</button></td>
+			</form>
+			<form action="employees_list.html">
+				<td class="button_row"><button  class="delete_Button" >Delete</button></td>
+			</form>
+		</tr>
+
+		</tbody>
+		
+</body>
+
+<script type="text/javascript">
+	input_Name2.value=(location.search.split("&")[0]).split("=")[1]
+	input_Surname2.value=(location.search.split("&")[1]).split("=")[1]
+	input_Date2.value=(location.search.split("&")[2]).split("=")[1]
+	input_Position2.value=(location.search.split("&")[3]).split("=")[1]
+	input_Salary2.value=(location.search.split("&")[4]).split("=")[1]
+	input_Department2.value=(location.search.split("&")[5]).split("=")[1]
+
+
+</script>
