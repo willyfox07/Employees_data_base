@@ -25,7 +25,7 @@
 	<label class="employee_filter" for = "Min.number">Sort from:</label>
 	<input type="text" id="Min.number" name="Min.number of employees" placeholder="Min.number of employees"> 
 	<label class="employee_filter" for="Max.number">by:</label>
-	<input type="text" id="Max.number" name="Max.number of employees" placeholder="Max.number of employees">	
+	<input type="text" id="Max.number" name="Max.number of employees" placeholder="Max.number of employees" onkeyup="filter_number()">	
 		<button class="show_All_Button" id="show_all" >Show all</button>
 	</form>
 	<table id="zen" class="table_employees">
@@ -38,7 +38,7 @@
 			<th>Average salary</th>
 			<th class="button_row" colspan="2">
 				<form action="department_list.html">
-					<button id="refresh" class="refresh_Button" >Refresh</button>
+					<button id="refresh" class="refresh_Button"  onclick="filter()">Refresh</button>
 				</form>
 				
 			</th>
@@ -82,5 +82,65 @@
 	input_Date2.value=(location.search.split("&")[1]).split("=")[1].replace('+', ' ')
 	input_Position2.value=(location.search.split("&")[2]).split("=")[1]
 
+function filter(argument) {
+	var  min_number, table, location, tr, td , i, td2, input, j;
+	location = document.getElementById("Location");
 
+	input = location.value.toUpperCase();
+	table = document.getElementById("zen");
+  tr = table.getElementsByTagName("tr");
+
+	for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[3];
+    td2 = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(input) > -1) {
+        tr[i].style.display = "";
+    }
+      else{
+      	tr[i].style.display = "none";
+      }
+    	
+    }
+  
+  }
+}
+function filter_number(argument) {
+		min_number = document.getElementById("Min.number").value;
+	max_number = document.getElementById("Max.number").value;
+		table = document.getElementById("zen");
+  tr = table.getElementsByTagName("tr");
+	for (i = 0; i < tr.length; i++){
+		td = tr[i].getElementsByTagName("td")[1];
+		if(td){
+			if(min_number >4 && max_number < 40){
+    		tr[1].style.display = "none";
+    		tr[2].style.display = "none";
+    	}
+    	if(max_number < 5){
+    		tr[1].style.display = "none";
+    		tr[2].style.display = "none";
+    		tr[3].style.display = "none";
+    	}
+    	if(min_number > 5 && max_number <1000){
+    		tr[3].style.display = "none";
+    	}
+    	if(min_number >40 && max_number <1000){
+    		tr[1].style.display = "none";
+    		tr[3].style.display = "none";
+    	}
+    	if(min_number > 5 && max_number <40){
+    		tr[1].style.display = "none";
+    		tr[2].style.display = "none";
+    		tr[3].style.display = "none";
+    	}
+    	if(min_number > 40 && max_number < 60){
+    		tr[1].style.display = "none";
+    		tr[2].style.display = "none";
+    		tr[3].style.display = "none";
+    	}
+
+		}
+	}
+}
 </script>
