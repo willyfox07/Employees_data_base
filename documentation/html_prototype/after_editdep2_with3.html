@@ -14,7 +14,6 @@
 			<li><a class="navigation_button" href="add_department2.html" id="add_Button">Add</a></li>
  		 </ul>
 	</nav>
-	<form action="show_all_department.html">
 	<label class="employee_filter" for="Location">Sort by:</label>
 	<select id="Location">
 		<option value="Location" hidden="">Location</option>
@@ -26,10 +25,7 @@
 	<input type="text" id="Min.number" name="Min.number of employees" placeholder="Min.number of employees"> 
 	<label class="employee_filter" for="Max.number">by:</label>
 	<input type="text" id="Max.number" name="Max.number of employees" placeholder="Max.number of employees" onkeyup="filter_number()"> 
-	
-		<button class="show_All_Button" id="show_all_department.html" >Show all</button>
-	</form>
-	
+	<button class="show_All_Button" id="show_all" >Show all</button>
 	
 	
 	<table id="zen" class="table_employees">
@@ -40,30 +36,66 @@
 			<th>Head</th>
 			<th>Location</th>
 			<th>Average salary</th>
-			<th class="button_row" colspan="2"><button id="refresh" class="refresh_Button" onclick="filter()" >Refresh</button></th>
+			<th class="button_row" colspan="2">
+				<form action="department_list.html">
+					<button id="refresh" class="refresh_Button" >Refresh</button>
+				</form>
+				
+			</th>
 		</tr>
 
-		<tr>
+		<tr>		
 			<td>Enterprise Software</td>
 			<td>40</td>
 			<td>Aliaksei Strunets</td>
 			<td>Brest office</td>
 			<td>600</td>
-			<form action="edit_department1.html">
+
+			<form action="edit_department1_with2.html">
 				<td class="button_row"><button class="edit_Button">Edit</button></td>
 			</form>
-			<form action="delete_department1.html">
+			<form action="department_list.html">
 				<td class="button_row"><button id="2021" class="delete_Button" >Delete</button></td>
 			</form>
-			
+		</tr>
 
+		<tr>		
+			<td><output id="input_Name2"></output></td>
+			<td>60</td>
+			<td><output id="input_Date2"></output></td>
+			<td><output id="input_Position2"></output></td>
+			<td>800</td>
+			<form action="edit_dep2_with3.html">
+				<td class="button_row"><button class="edit_Button">Edit</button></td>
+			</form>
+			<form action="delete_dep2_with2.html">
+				<td class="button_row"><button id="2021" class="delete_Button" >Delete</button></td>
+			</form>
+		</tr>
+
+		<tr>
+			<td>Testing</td>
+			<td> 5</td>
+			<td>Aliaksei Strunets</td>
+			<td>Gomel</td>
+			<td>400</td>
+			<form action="edit_department3.html">
+				<td class="button_row"><button class="edit_Button">Edit</button></td>
+			</form>
+			<form action="2first_department.html">
+				<td class="button_row"><button id="2021" class="delete_Button" >Delete</button></td>
+			</form>
 		</tr>
 
 		</tbody>
 	
 </body>
+
 <script type="text/javascript">
-	function filter(argument) {
+	input_Name2.value=(location.search.split("&")[0]).split("=")[1].replace('+', ' ')
+	input_Date2.value=(location.search.split("&")[1]).split("=")[1].replace('+', ' ')
+	input_Position2.value=(location.search.split("&")[2]).split("=")[1]
+function filter(argument) {
 	var  min_number, table, location, tr, td , i, td2, input, j;
 	location = document.getElementById("Location");
 
@@ -114,4 +146,5 @@ function filter_number(argument) {
 		}
 	}
 }
+
 </script>

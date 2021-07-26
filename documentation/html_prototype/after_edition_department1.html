@@ -14,19 +14,20 @@
 			<li><a class="navigation_button" href="add_department2.html" id="add_Button">Add</a></li>
  		 </ul>
 	</nav>
+	<form action="show_all_department.html">
 	<label class="employee_filter" for="Location">Sort by:</label>
 	<select id="Location">
-		<option value="Location">Location</option>
+		<option value="Location" hidden="">Location</option>
 		<option value="Brest">Brest</option>
 		<option value="Minsk">Minsk</option>
 		<option value="Gomel">Gomel</option>
 	</select>
 	<label class="employee_filter" for = "Min.number">Sort from:</label>
-	<input type="text" id="Min.number" name="Min.number of employees"> 
+	<input type="text" id="Min.number" name="Min.number of employees" placeholder="Min.number of employees"> 
 	<label class="employee_filter" for="Max.number">by:</label>
-	<input type="text" id="Max.number" name="Max.number of employees"> 
+	<input type="text" id="Max.number" name="Max.number of employees" placeholder="Max.number of employees"> 
 	<button class="show_All_Button" id="show_all" >Show all</button>
-	
+	</form>
 	
 	<table id="zen" class="table_employees">
 		<tbody >
@@ -62,8 +63,8 @@
 </body>
 
 <script type="text/javascript">
-	input_Name2.value=(location.search.split("&")[0]).split("=")[1]
-	input_Date2.value=(location.search.split("&")[1]).split("=")[1]
+	input_Name2.value=(location.search.split("&")[0]).split("=")[1].replace('+', ' ')
+	input_Date2.value=(location.search.split("&")[1]).split("=")[1].replace('+', ' ')
 	input_Position2.value=(location.search.split("&")[2]).split("=")[1]
 
 
