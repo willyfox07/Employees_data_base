@@ -23,16 +23,11 @@ jobs:
      - name: Analysing the code with pylint
        run: |
           find . -name '*.py' -exec pylint {} \;
-     - name: Install Coveralls
-       run: pip install coveralls
-        
-     - name: Run coverage
-       run: npm run test:coverage
        
      - name: Coveralls GitHub Action
-       uses: coverallsapp/github-action@1.1.3
-       with:
-        github-token: ${{ secrets.GTHUB-TOKEN }}
+       env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       run: coveralls --service=github
 
       
     
