@@ -23,10 +23,8 @@ jobs:
      - name: Analysing the code with pylint
        run: |
           find . -name '*.py' -exec pylint {} \;
-     - name: Install coverage
-       run: | 
-        pip install coverage
-        coverage run --source=department_project department_project/manage.py test department app
+     - name: Unit test
+       run: make test
      - name: Install Coveralls
        run:  pip install coveralls
        
