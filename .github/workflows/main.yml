@@ -11,11 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     - uses: actions/checkout@v2
-       env: 
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-   
-    
+     - uses: actions/checkout@v2   
      - name: Set up Python 3.8
        uses: actions/setup-python@v1
        with:
@@ -31,7 +27,8 @@ jobs:
        run: pip install coveralls
         
      - name: Coveralls
-       run: coveralls --service=github
        env:
-        GITHUB-TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB-TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       run: coveralls --service=github
+      
     
