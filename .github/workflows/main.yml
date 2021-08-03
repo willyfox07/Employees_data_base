@@ -25,6 +25,9 @@ jobs:
         find . -name '*.py' -exec pylint {} \;
     - name: Install Coveralls
       run: pip install coveralls
+    
+    - name: Testint coverage       
+      run:  coverage run --source=department_project department_project/manage.py test department_app
         
     - name: Coveralls
       uses: coverallsapp/github-action@master
