@@ -18,6 +18,7 @@ jobs:
             python-version: 3.8
      - name: Install dependencies
        run: |
+          source myvenv/bin/activate
           python -m pip install --upgrade pip
           pip install pylint
      - name: Analysing the code with pylint
@@ -26,7 +27,7 @@ jobs:
      - name: Install coverage
        run: | 
         pip install coverage
-        coverage run --source=department_project test department app
+        coverage run --source=department_project department_project/manage.py test department app
      - name: Install Coveralls
        run:  pip install coveralls
        
