@@ -26,7 +26,7 @@ jobs:
      - name: Install coverage
        run: | 
         pip install coverage
-        coverage run
+        coverage run --source=department_project department_project/manage.py test department_app
      - name: Install Coveralls
        run:  pip install coveralls
        
