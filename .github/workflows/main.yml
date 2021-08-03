@@ -23,6 +23,8 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         find . -name '*.py' -exec pylint {} \;
+    - name: Install Coveralls
+      run: pip install coveralls
         
     - name: Coveralls
       uses: coverallsapp/github-action@master
