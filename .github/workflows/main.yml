@@ -29,7 +29,7 @@ jobs:
          
      - name: Pylint load-plugin
        run: 
-          pylint --load-plugins=pylint_django --django-settings-module=department_project.settings department_project/*.py           
+          pylint --load-plugins=pylint_django --django-settings-module=department_project.settings department_project/*          
        
                  
      - name: Install Coveralls
@@ -38,7 +38,7 @@ jobs:
      - name: Install coverage
        run: |
            pip install coverage
-           coverage run --source=department_project/manage.py department_project/department_app
+           coverage run --source=department_project/department_project/manage.py department_app
      
        
      - name: Coveralls GitHub Action
