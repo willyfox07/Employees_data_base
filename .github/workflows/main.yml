@@ -25,6 +25,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pylint pylint-django
           pip install -r requirements.txt
+          pip install django_coverage_plugin
          
      - name: Pylint load-plugin
        run: 
@@ -34,8 +35,6 @@ jobs:
      - name: Install Coveralls
        run:  pip install coveralls
      
-     - name: Start test
-       run: coverage run --source=department_project/manage.py test department_app
        
      - name: Coveralls GitHub Action
        env:
