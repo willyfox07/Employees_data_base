@@ -30,7 +30,7 @@ jobs:
        run:  pip install coveralls
          
      - name: Pylint load-plugin
-       run: pylint --load-plugins=pylint_django --django-settings-module=department_project.settings  department_project            
+       run: pylint --load-plugins=pylint_django --django-settings-module=department_project.settings  department_project/*.py            
        
      - name: Coveralls GitHub Action
        env:
