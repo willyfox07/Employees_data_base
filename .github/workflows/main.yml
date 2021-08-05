@@ -3,31 +3,38 @@
 name: CI
 
 # Controls when the workflow will run
-on: [push]
+on: [push, pull_request]
+ 
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+         python-version: [3.6, 3.7, 3.8, 3.9]
     steps:
      - uses: actions/checkout@v2   
-     - name: Set up Python 3.8
+     - name: Set up Python ${{ matrix.python-version }}
        uses: actions/setup-python@v1
        with:
-            python-version: 3.8
-            
-     - name: Install Coveralls
-       run:  pip install coveralls
+            python-version: ${{ matrix.python-version }}
        
      - name: Install dependencies
        run: |
           python -m pip install --upgrade pip
-          pip install pylint
-     - name: Analysing the code with pylint
+          pip install pylint pylint-django
+          pip install -r requirements.txt
+          pip install django_coverage_plugin
+         
+     - name: Pylint load-plugin
        run: 
-          find . -name '*.py' -exec pylint {} \;
-    
+          pylint --load-plugins=pylint_django --django-settings-module=department_project.settings department_project/*.py           
+       
+                 
+     - name: Install Coveralls
+       run:  pip install coveralls
+     
        
      - name: Coveralls GitHub Action
        env:
