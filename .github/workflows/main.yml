@@ -34,6 +34,10 @@ jobs:
      - name: Install Coveralls
        run:  pip install coveralls
        
+     - name: Testint coverage       
+       run:
+          coverage run --source=department_project department_project/manage.py test department_app 
+       
      - name: Coveralls GitHub Action
        env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
