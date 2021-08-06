@@ -1,4 +1,4 @@
-[![CI](https://github.com/willyfox07/pythonProject/actions/workflows/main.yml/badge.svg)](https://github.com/willyfox07/pythonProject/actions/workflows/main.yml) [![Coverage Status](https://coveralls.io/repos/github/willyfox07/pythonProject/badge.svg?branch=main)](https://coveralls.io/github/willyfox07/pythonProject?branch=main)
+[![CI](https://github.com/willyfox07/pythonProject/actions/workflows/main.yml/badge.svg)](https://github.com/willyfox07/pythonProject/actions/workflows/main.yml) [![![Coverage Status](https://coveralls.io/repos/github/willyfox07/pythonProject/badge.svg?branch=GitHub-actions)](https://coveralls.io/github/willyfox07/pythonProject?branch=GitHub-actions)
 
 
 # Employee Manager
