@@ -37,7 +37,7 @@ jobs:
      - name: Install coverage
        run: |
            pip install coverage
-           coverage run --source=department_project department_project/manage.py test department_project
+           coverage run --source=department_project department_project/manage.py test department_project, department app
      
        
      - name: Coveralls GitHub Action
