@@ -1,5 +1,4 @@
-from django.urls import path
-from . import views
+"""Contain information about urls of department app application"""
 
 urlpatterns = [
 
