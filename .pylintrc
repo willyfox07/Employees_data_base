@@ -21,6 +21,9 @@ fail-under=10.0
 
 # Files or directories to be skipped. They should be base names, not paths.
 ignore=CVS,
+        manage.py,
+        admin.py,
+        apps.py
         
 
 # Add files or directories matching the regex patterns to the ignore-list. The
