@@ -1,3 +1,5 @@
+"""Stores application installation information"""
+
 from setuptools import setup
 
 setup(
