@@ -41,7 +41,7 @@ jobs:
            
      - name: Execute migrations
        run: |
-           python3 department_project.manage.py migrate
+           python3 department_project/department_project/manage.py migrate
      
        
      - name: Coveralls GitHub Action
