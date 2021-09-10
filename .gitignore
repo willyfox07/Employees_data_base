@@ -1,4 +1,4 @@
 .idea/
 __pycache__
-/myvenv
+myvenv
 db.sqlite3
