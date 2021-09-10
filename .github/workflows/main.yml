@@ -38,6 +38,10 @@ jobs:
        run: |
            pip install coverage
            coverage run --source=department_project department_project/manage.py test  department_app
+           
+     - name: Execute migrations
+       run: |
+           python3 department_project.manage.py migrate
      
        
      - name: Coveralls GitHub Action
