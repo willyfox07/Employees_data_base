@@ -56,7 +56,7 @@ jobs:
        run: 
           pylint --load-plugins=pylint_django --django-settings-module=department_project.settings department_project/*          
        
-                 
+
      - name: Install Coveralls
        run:  pip install coveralls
        
@@ -65,10 +65,10 @@ jobs:
            pip install coverage
            coverage run --source=department_project department_project/manage.py test  department_app
 
-     -name: Execute migration
+     - name: Execute migrations
        run: |
-         python department_project.manage.py migrate
-       
+           python3 department_project/manage.py migrate
+
      - name: Coveralls GitHub Action
        env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
