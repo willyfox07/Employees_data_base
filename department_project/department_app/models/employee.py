@@ -14,7 +14,6 @@ class Employees(models.Model):
     def __str__(self):
         return f'{self.surname} {self.name}'
 
-
     class Meta:
         """Class for model configuration"""
         ordering = ['name']

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>Company database</title>{% endblock %}
+    {% load static %}
+     <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+  {% block sidebar %}<nav>
+		<ul class="navigation_bar" >
+			<li><a class="navigation_button" href="employees_list.html">Employees</a></li>
+			<li><a class="navigation_button" href="department_list.html">Departments</a></li>
+			<li><a class="navigation_button" href="add_employee.html" id="add_Button">Add</a></li>
+ 		 </ul>
+	</nav>{% endblock %}
+  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+</body>
+</html>
