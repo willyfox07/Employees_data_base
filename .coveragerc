@@ -4,7 +4,7 @@
             setup.py
             manage.py
             settings.py
-            /migrations/*
+            /migrations*
             *wsgi.py
             *asgi.py
             *apps.py
