@@ -10,7 +10,6 @@ class Department(models.Model):
     number_of_employees = models.IntegerField()
     head = models.ForeignKey('Employees', on_delete=models.CASCADE, blank=True, null=True)
     location = models.CharField(max_length=50)
-    average_salary = models.DecimalField(max_digits=6, decimal_places=2)
 
     def __str__(self):
         return self.name
