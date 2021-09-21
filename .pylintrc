@@ -23,7 +23,8 @@ fail-under=10.0
 ignore=CVS,
         manage.py,
         admin.py,
-        apps.py
+        apps.py,
+        migrations,
         
 
 # Add files or directories matching the regex patterns to the ignore-list. The

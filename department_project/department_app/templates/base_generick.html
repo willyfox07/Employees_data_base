@@ -9,9 +9,10 @@
 <body>
   {% block sidebar %}<nav>
 		<ul class="navigation_bar" >
-			<li><a class="navigation_button" href="employees_list.html">Employees</a></li>
-			<li><a class="navigation_button" href="department_list.html">Departments</a></li>
-			<li><a class="navigation_button" href="add_employee.html" id="add_Button">Add</a></li>
+			<li><a class="navigation_button" href="{% url 'employee_page'  %}" >Employees</a></li>
+			<li><a class="navigation_button" href="{% url 'department_page'  %}">Departments</a></li>
+			{% block addbutton %}<li><a class="navigation_button"  id="add_Button">Add</a></li>{% endblock %}
+
  		 </ul>
 	</nav>{% endblock %}
   {% block content %}<!-- default content text (typically empty) -->{% endblock %}

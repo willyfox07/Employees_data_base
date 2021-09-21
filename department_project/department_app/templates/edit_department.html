@@ -1,0 +1,45 @@
+{% extends "base_generick.html" %}
+{% block title %}<title>Edit department</title>{% endblock %}
+{% load static %}
+{% block sidebar %}
+<ul class="navigation_bar" >
+    <li><a class="navigation_button" href="{% url 'employee_page'  %}">Employees</a></li>
+    <li><a class="navigation_button" href="{% url 'department_page' %}">Departments</a></li>
+</ul>
+{% endblock %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <div class="grid_container">
+
+        <div class="grid_item">
+            <label >Department:</label>
+        </div>
+        <div class="grid_item">
+            {{form.name}}
+        </div>
+        <div class="grid_item">
+            <label for="Head">Head:</label>
+        </div>
+        <div class="grid_item">
+            {{form.head}}
+        </div>
+        <div class="grid_item">
+            <label for="Location">Location:</label>
+        </div>
+        <div class="grid_item">
+            {{form.location}}
+        </div>
+        <div class="grid_item">
+            <label for="Number_of_employees">Number_of_employees:</label>
+        </div>
+        <div class="grid_item">
+            {{form.number_of_employees}}
+        </div>
+        <div class="grid_button"><a class="navigation_button" id="add_cancel_button"  href="{% url 'department_page' %}">Cancel</a></div>
+        <div class="grid_button"><button type="submit" class="navigation_button"id="add_save_button">Save</button></div>
+        <span>{{ error}}</span>
+    </div>
+</form>
+
+{% endblock %}

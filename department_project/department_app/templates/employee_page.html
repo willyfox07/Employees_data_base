@@ -1,7 +1,8 @@
-{% extends "base_generick.html %}
-
+{% extends "base_generick.html" %}
+{% block title %}<title>Employee database</title>{% endblock %}
+{% block addbutton %} <li><a class="navigation_button" href="{% url 'create_employee' %}" id="add_Button">Add</a></li>{% endblock %}
 {% block content %}
-<form action="show_all_employees.html">
+<form >
 	<label class="employee_filter" for="begin_date">Sort from:</label>
 	<input type="date" id="begin_date" name="begin_date">
 	<label class="employee_filter" for = "last_date">by:</label>
@@ -25,27 +26,26 @@
 			<th>Position held</th>
 			<th>Salary</th>
 			<th>Department</th>
-			<th class="button_row" colspan="2">
-				<form action="employees_list.html">
-					<button id="refresh" class="refresh_Button" >Refresh</button>
-				</form>
-			</th>
-		</tr>
 
+		</tr>
+		{% for emp in object_list %}
 		<tr>
-			<td>Aliaksei</td>
-			<td>Strunets</td>
-			<td>01.09.2021</td>
-			<td>Programmer</td>
-			<td>700</td>
-			<td>Enterprise Software Development</td>
-			<form action="edit_employee1.html">
+			<td>{{emp.name}}</td>
+			<td>{{emp.surname}}</td>
+			<td>{{emp.date_of_birth}}</td>
+			<td>{{emp.position_held}}</td>
+			<td>{{emp.salary}}</td>
+			<td>{{emp.depart}}</td>
+			<form method="get" action="{% url 'edit_employee' emp.id %}">
+				{% csrf_token %}
 				<td class="button_row"><button class="edit_Button">Edit</button></td>
 			</form>
-			<form action="delete_employee1.html">
+			<form method="post" action="{% url 'delete_employee' emp.id %}">
+				{% csrf_token %}
 				<td class="button_row"><button id="2021" class="delete_Button" >Delete</button></td>
 			</form>
 		</tr>
+			{% endfor %}
         </table>
     </table>
 {% endblock %}

@@ -15,10 +15,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from department_app.urls import router
-
+from department_app.views.department_view import DepartmentCreateView, DepartmentDeleteView,\
+                                                  DepartmentUpdateView, DepartmentListView
+from department_app.views.employee_view import EmployeeCreateView, EmployeeDeleteView,\
+                                                  EmployeeUpdateView, EmployeeListView
 
 urlpatterns = [
+    path('', DepartmentListView.as_view(), name="department_page"),
     path('admin/', admin.site.urls),
-    path('api/v1/', include(router.urls)),
+    path('api/v1/', include('department_app.urls')),
+    path('create_department/', DepartmentCreateView.as_view(), name="create_department"),
+    path('edit_department/<int:pk>', DepartmentUpdateView.as_view(), name="edit_department"),
+    path('delete_department/<int:pk>', DepartmentDeleteView.as_view(), name="delete_department"),
+    path('employee/',EmployeeListView.as_view(), name="employee_page"),
+    path('employee/create_employee/', EmployeeCreateView.as_view(), name="create_employee"),
+    path('employee/edit_employee/<int:pk>', EmployeeUpdateView.as_view(), name="edit_employee"),
+    path('employee/delete_employee/<int:pk>', EmployeeDeleteView.as_view(), name="delete_employee"),
+
+
 ]
