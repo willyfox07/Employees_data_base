@@ -21,9 +21,10 @@ from department_app.views.employee_view import EmployeeCreateView, EmployeeDelet
                                                   EmployeeUpdateView, EmployeeListView
 
 urlpatterns = [
-    path('', DepartmentListView.as_view(), name="department_page"),
     path('admin/', admin.site.urls),
     path('api/v1/', include('department_app.urls')),
+    path('', DepartmentListView.as_view(), name="department_page"),
+
     path('create_department/', DepartmentCreateView.as_view(), name="create_department"),
     path('edit_department/<int:pk>', DepartmentUpdateView.as_view(), name="edit_department"),
     path('delete_department/<int:pk>', DepartmentDeleteView.as_view(), name="delete_department"),

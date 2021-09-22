@@ -9,7 +9,7 @@ from django.views.generic import CreateView, UpdateView,\
                                     ListView, DeleteView
 
 
-class DepartmentListView(generics.ListAPIView):
+class DepartmentListAPIView(generics.ListAPIView):
     """Class for displaying list of departments"""
     queryset = Department.objects.all()
     serializer_class = DepartmentDetailSerializers
@@ -32,14 +32,30 @@ class DepartmentListView(generics.ListAPIView):
 
 class DepartmentListView(ListView):
     """Class for dispalying models"""
-    model = Department
+    #model = Department
     template_name = 'department_page.html'
-    context_object_name = 'Department'
+    #context_object_name = 'Department'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['Department'] = Department.objects.all()
         return context
+
+    def get_queryset(self):
+        queryset = Department.objects.all()
+        params = self.request.GET
+        min = params.get('min', None)
+        max = params.get('max', None)
+        location = params.get('location', None)
+        if location:
+            queryset = queryset.filter(location__icontains=location)
+        if min:
+            queryset = queryset.filter(number_of_employees__gte=min)
+        if max:
+            queryset = queryset.filter(number_of_employees__lte=max)
+        return queryset
+
+
 
 
 class DepartmentCreateView(CreateView):
@@ -67,3 +83,5 @@ class DepartmentDeleteView(DeleteView):
     """Class for deleting model"""
     model = Department
     success_url = reverse_lazy('department_page')
+
+

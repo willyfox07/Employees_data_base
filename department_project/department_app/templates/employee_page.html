@@ -2,20 +2,20 @@
 {% block title %}<title>Employee database</title>{% endblock %}
 {% block addbutton %} <li><a class="navigation_button" href="{% url 'create_employee' %}" id="add_Button">Add</a></li>{% endblock %}
 {% block content %}
-<form >
+<form  action="{% url 'employee_page' %}" >
 	<label class="employee_filter" for="begin_date">Sort from:</label>
-	<input type="date" id="begin_date" name="begin_date">
+	<input type="date" id="begin_date" name="date_from">
 	<label class="employee_filter" for = "last_date">by:</label>
-	<input type="date" id="last_date" name="last_date">
-	<button class="show_All_Button" id="show_all" >Show all</button>
-	<label class="employee_filter" for="sort_departments">Select department:</label>
-	<select id="sort_departments">
-		<option value="All departments">All departments</option>
-		<option value="Enterprise software department">Enterprise software department</option>
-		<option value="Testing">Testing</option>
-		<option value="Support">Support</option>
+	<input type="date" id="last_date" name="date_to">
+	<label class="employee_filter" >Select department:</label>
+	<select  name="department">
+		<option ></option>
+		{% for employee in object_list %}
+		<option>{{employee.depart}}</option>
+		{% endfor %}
 	</select>
-	</form>
+	<button type="submit">Найти</button>
+</form>
 
 	<table id="zen" class="table_employees">
 		<table >
@@ -26,7 +26,11 @@
 			<th>Position held</th>
 			<th>Salary</th>
 			<th>Department</th>
-
+				<th class="button_row" colspan="2">
+				<form href="employee_page">
+					<button id="refresh" class="refresh_Button" >Show all</button>
+				</form>
+			</th>
 		</tr>
 		{% for emp in object_list %}
 		<tr>

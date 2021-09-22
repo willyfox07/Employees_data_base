@@ -4,20 +4,20 @@
 
 
 {% block content %}
-<form >
+<form  action="{% url 'department_page' %}" >
 	<label class="employee_filter" for="begin_date">Sort from:</label>
-	<input type="date" id="begin_date" name="begin_date">
+	<input type="number"  id="begin_date" name="min" placeholder="min number of employees">
 	<label class="employee_filter" for = "last_date">by:</label>
-	<input type="date" id="last_date" name="last_date">
-	<button class="show_All_Button" id="show_all" >Show all</button>
-	<label class="employee_filter" for="sort_departments">Select department:</label>
-	<select id="sort_departments">
-		<option value="All departments">All departments</option>
-		<option value="Enterprise software department">Enterprise software department</option>
-		<option value="Testing">Testing</option>
-		<option value="Support">Support</option>
+	<input type="number"   id="last_date" name="max" placeholder="max number of employees">
+	<label class="employee_filter" for="sort_departments">Select location:</label>
+	<select name="location" id="sort_departments" >
+		<option></option>
+		{% for Departments in object_list %}
+		<option >{{Departments.location}}</option>
+		{% endfor %}
 	</select>
-	</form>
+	<button type="submit">Найти</button>
+</form>
 
 	<table id="zen" class="table_employees">
 		<tbody >
@@ -26,6 +26,11 @@
 			<th>Number of employees</th>
 			<th>Head</th>
 			<th>Location</th>
+				<th class="button_row" colspan="2">
+				<form href="department_page">
+					<button id="refresh" class="refresh_Button" >Show all</button>
+				</form>
+			</th>
 		</tr>
 		{% for Departments in object_list %}
 		<tr>

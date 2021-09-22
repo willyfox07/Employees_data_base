@@ -7,7 +7,7 @@ from ..service.employee_service import EmployeeForm
 from django.views.generic import CreateView, UpdateView, ListView, DeleteView
 
 
-class EmployeeListView(generics.ListAPIView):
+class EmployeeListAPIView(generics.ListAPIView):
     """Class for displaying list of employees"""
     queryset = Employees.objects.all()
     serializer_class = EmployeeDetailSerializers
@@ -24,20 +24,35 @@ class EmployeeListView(generics.ListAPIView):
         if date_to:
             queryset = queryset.filter(date_of_birth__lte=date_to)
         if department:
-            queryset = queryset.filter(depart__gte=department)
+            queryset = queryset.filter(depart__name=department)
         return queryset
 
 
 class EmployeeListView(ListView):
     """Class for dispalying models"""
-    model = Employees
+    #model = Employees
     template_name = 'employee_page.html'
-    context_object_name = 'Employees'
+    #context_object_name = 'Employees'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['Employees'] = Employees.objects.all()
         return context
+
+    def get_queryset(self):
+        """Function for filtering requested data"""
+        queryset = Employees.objects.all()
+        params = self.request.GET
+        date_from = params.get('date_from', None)
+        date_to = params.get('date_to', None)
+        department = params.get('department', None)
+        if date_from:
+            queryset = queryset.filter(date_of_birth__gte=date_from)
+        if date_to:
+            queryset = queryset.filter(date_of_birth__lte=date_to)
+        if department:
+            queryset = queryset.filter(depart__name=department)
+        return queryset
 
 
 class EmployeeCreateView(CreateView):
