@@ -1,0 +1,197 @@
+.navigation_button{
+	display: inline-block;
+	color: white;
+	height: 32px;
+	text-align: center;
+	padding: 34px 50px;
+	text-decoration: none;
+	float: left;
+
+}
+
+.navigation_button:hover {
+	background-color: #A9A9A9;
+	color: black;
+}
+
+
+#add_Button {
+	position:relative;
+	border-width: 1px;
+	border-color: black;
+	float: right;
+	color: white;
+	background-color: #1E90FF;
+	cursor: pointer;
+}
+
+#add_Button:hover {
+	background-color: #00BFFF;
+
+}
+
+body {
+	margin: auto ;
+	width: 100%;
+}
+
+.navigation_bar {
+	list-style-type: none;
+    padding: 10;
+    margin: auto;
+    overflow: hidden;
+    background-color: #333;
+
+}
+
+.employee_filter{
+	display: inline-block;
+	margin-left: 2%;
+	margin-top: 40px;
+	margin-right: 10px;
+}
+
+.table_employees, th, td{
+	margin-top: 30px;
+	margin-left: 2%;
+	border:1px solid black;
+	border-collapse: collapse;
+	padding: 15px 25px 15px 25px;
+
+	
+}
+
+.delete_Button{
+	position:relative;
+	text-align: center;
+	border-width: 1px;
+	border-color: black;
+	width: 100% ;
+	height: 115px;
+	color: white;
+	background-color: #FF4500;
+	cursor: pointer;
+}
+
+.delete_Button:hover{
+	background-color: #B22222;
+	float: left;
+}
+
+.edit_Button{
+	position:relative;
+	text-align: center;
+	border-width: 1px;
+	border-color: black;
+	width: 100%;
+	height: 115px;
+	color: white;
+	background-color: #1E90FF;
+	cursor: pointer;
+
+}
+
+.edit_Button:hover{
+	background-color: #00BFFF;
+	float: left;
+}
+
+.refresh_Button{
+	position:relative;
+	text-align: center;
+	border-width: 1px;
+	border-color: black;
+	width: 100%;
+	height: 50px;
+	color: white;
+	background-color: #66CDAA;
+	cursor: pointer;
+}
+
+.refresh_Button:hover{
+	background-color: #00BFFF;
+}
+
+th{
+	background-color: #0000CD;
+	color: white;
+}
+
+.button_row{
+	padding: 0px;
+	width: 100px;
+}
+
+.show_All_Button{
+position: relative;
+text-align: center;
+border-width: 1px;
+border-color: black;
+cursor: pointer;
+color: white;
+background-color: #66CDAA;
+height: 24px;
+}
+
+.show_All_Button:hover{
+	background-color: #00BFFF;
+}
+
+.grid_container{
+	position: relative;
+	display: grid;
+	padding: 10% 25% 25% 40%;
+	grid-template-columns: 200px 200px;
+
+}
+
+.grid_item{
+	padding: 10px;
+	text-align: left;
+	
+}
+
+#add_cancel_button{
+	background-color: #B22222  ;
+	color: white;
+	height:32px;
+	border-width: 1px;
+	border-color: black;
+	float: right;
+}
+
+#add_cancel_button:hover{
+	background-color: #FF4500  ;
+}
+
+#add_save_button{
+	background-color:#008000 ;
+	height: 100px;
+	color: white;
+	border-color: black;
+	float: right;
+}
+
+#add_save_button:hover{
+	background-color:#3CB371 ;
+}
+
+.header_add{
+	position: relative;
+	background-color: #1E90FF;
+	color: white;
+	text-align: center;
+	height: 40px;
+	padding-top: 20px;
+	width: 100%;
+}
+
+.grid_button{
+	display: inline-block;
+	color: white;
+	height: 32px;
+	text-align: center;
+	padding: 34px 50px;
+	text-decoration: none;
+	float: left;
+}

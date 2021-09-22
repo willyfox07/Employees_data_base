@@ -8,3 +8,4 @@ urlpatterns = [
     path('employee/', EmployeeListAPIView.as_view()),
     path('department/', DepartmentListAPIView.as_view())
 ]
+
