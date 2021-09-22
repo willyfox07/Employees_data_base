@@ -1,1 +1,0 @@
-web: cd department_project/ python3 manage.py migrate && gunicorn django_project.wsgi

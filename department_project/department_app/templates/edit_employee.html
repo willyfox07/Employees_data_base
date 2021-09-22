@@ -1,0 +1,57 @@
+{% extends "base_generick.html" %}
+{% block title %}<title>Edit employee</title>{% endblock %}
+{% load static %}
+{% block sidebar %}
+<ul class="navigation_bar" >
+    <li><a class="navigation_button" href="{% url 'employee_page'  %}">Employees</a></li>
+    <li><a class="navigation_button" href="{% url 'department_page' %}">Departments</a></li>
+</ul>
+{% endblock %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <div class="grid_container">
+
+        <div class="grid_item">
+            <label >Name:</label>
+        </div>
+        <div class="grid_item">
+            {{form.name}}
+        </div>
+        <div class="grid_item">
+            <label>Surname:</label>
+        </div>
+        <div class="grid_item">
+            {{form.surname}}
+        </div>
+        <div class="grid_item">
+            <label >Date of birth:</label>
+        </div>
+        <div class="grid_item">
+            {{form.date_of_birth}}
+        </div>
+        <div class="grid_item">
+            <label >Position held:</label>
+        </div>
+        <div class="grid_item">
+            {{form.position_held}}
+        </div>
+        <div class="grid_item">
+            <label >Salary:</label>
+        </div>
+        <div class="grid_item">
+            {{form.salary}}
+        </div>
+        <div class="grid_item">
+            <label >Department:</label>
+        </div>
+        <div class="grid_item">
+            {{form.depart}}
+        </div>
+        <div class="grid_button"><a class="navigation_button" id="add_cancel_button"  href="{% url 'employee_page' %}">Cancel</a></div>
+        <div class="grid_button"><button type="submit" class="navigation_button"id="add_save_button">Save</button></div>
+    </div>
+    <span>{{ error}}</span>
+</form>
+
+{% endblock %}

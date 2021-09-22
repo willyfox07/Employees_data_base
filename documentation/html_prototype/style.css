@@ -6,7 +6,7 @@
 	padding: 34px 50px;
 	text-decoration: none;
 	float: left;
-
+    margin-right:60px;
 }
 
 .navigation_button:hover {
@@ -141,7 +141,7 @@ height: 24px;
 	position: relative;
 	display: grid;
 	padding: 10% 25% 25% 40%;
-	grid-template-columns: auto auto;
+	grid-template-columns: 400px 1fr;
 
 }
 
@@ -186,3 +186,12 @@ height: 24px;
 	width: 100%;
 }
 
+.grid_button{
+  	display: inline-block;
+	color: white;
+	height: 32px;
+	text-align: center;
+	padding: 34px 50px;
+	text-decoration: none;
+	float: left;
+}
