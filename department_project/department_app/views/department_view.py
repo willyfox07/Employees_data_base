@@ -8,7 +8,6 @@ from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, UpdateView,\
                                     ListView, DeleteView
 
-
 class DepartmentListAPIView(generics.ListAPIView):
     """Class for displaying list of departments"""
     queryset = Department.objects.all()
@@ -32,9 +31,9 @@ class DepartmentListAPIView(generics.ListAPIView):
 
 class DepartmentListView(ListView):
     """Class for dispalying models"""
-    #model = Department
+    # model = Department
     template_name = 'department_page.html'
-    #context_object_name = 'Department'
+    # context_object_name = 'Department'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -54,8 +53,6 @@ class DepartmentListView(ListView):
         if max:
             queryset = queryset.filter(number_of_employees__lte=max)
         return queryset
-
-
 
 
 class DepartmentCreateView(CreateView):
