@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-8)uz^)i3g%o#=_5_@u4ldiarja0#)3o3+nx8hh=*qj1)5v_2ke
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'myapp979.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://powerful-scrubland-05021.herokuapp.com/']
 
 django_heroku.settings(locals())
 # Application definition
