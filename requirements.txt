@@ -8,3 +8,4 @@ gunicorn==20.1.0
 django-filter==2.4.0
 whitenoise==3.2.2
 dj-database-url==0.4.1
+django-heroku==0.3.1
