@@ -132,9 +132,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = "/home/alex/employees_data_base/Employees_data_base/department_project/department_app"
-STATICFILES_DIRS = [
-    "/home/alex/employees_data_base/Employees_data_base/department_project/department_app/static",
-]
+
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
