@@ -132,7 +132,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = "Employees_data_base/department_project/department_app"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 #STATICFILES_FINDERS = (
     #'django.contrib.staticfiles.finders.FileSystemFinder',
