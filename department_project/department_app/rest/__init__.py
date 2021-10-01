@@ -1,0 +1,2 @@
+from department_app.rest.employee_serializer import EmployeeDetailSerializers
+from department_app.rest.department_serializer import DepartmentDetailSerializers

@@ -8,7 +8,7 @@ class Department(models.Model):
     name = models.CharField("name of department",
                             max_length=50)
     number_of_employees = models.IntegerField()
-    head = models.ForeignKey('Employees', on_delete=models.CASCADE,blank = True, null=True)
+    head = models.ForeignKey('Employees', on_delete=models.CASCADE, blank=True, null=True, related_name='head_name')
     location = models.CharField(max_length=50)
 
     def __str__(self):

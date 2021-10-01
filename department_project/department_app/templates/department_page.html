@@ -1,6 +1,8 @@
 {% extends "base_generick.html" %}
 {% block title %}<title> Department database </title>{% endblock %}
-{% block addbutton %} <li><a class="navigation_button" href="create_department" id="add_Button">Add</a></li>{% endblock %}
+{% block addbutton %}
+	<li><a class="navigation_button" href="{% url 'create_department' %}" id="add_Button">Add</a></li>
+{% endblock %}
 
 
 {% block content %}
@@ -12,7 +14,7 @@
 	<label class="employee_filter" for="sort_departments">Select location:</label>
 	<select name="location" id="sort_departments" >
 		<option></option>
-		{% for Departments in object_list %}
+		{% for Departments in Department %}
 		<option >{{Departments.location}}</option>
 		{% endfor %}
 	</select>
@@ -25,6 +27,7 @@
 			<th>Department</th>
 			<th>Number of employees</th>
 			<th>Head</th>
+			<th>Average salary</th>
 			<th>Location</th>
 				<th class="button_row" colspan="2">
 				<form href="department_page">
@@ -32,11 +35,12 @@
 				</form>
 			</th>
 		</tr>
-		{% for Departments in object_list %}
+		{% for Departments in Department%}
 		<tr>
 			<td>{{ Departments.name }}</td>
 			<td>{{ Departments.number_of_employees }}</td>
-			<td>{{ Departments.head }}</td>
+			<td>{{ Departments.head_name }}</td>
+			<td>{{ Departments.average_salary}}</td>
 			<td>{{ Departments.location }}</td>
 
 			<form  method="get" action="{% url 'edit_department' Departments.id %}">
