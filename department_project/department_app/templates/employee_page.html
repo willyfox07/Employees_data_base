@@ -10,8 +10,8 @@
 	<label class="employee_filter" >Select department:</label>
 	<select  name="department">
 		<option ></option>
-		{% for employee in object_list %}
-		<option>{{employee.depart}}</option>
+		{% for employee in Employees %}
+		<option>{{employee.department_name}}</option>
 		{% endfor %}
 	</select>
 	<button type="submit">Найти</button>
@@ -32,14 +32,14 @@
 				</form>
 			</th>
 		</tr>
-		{% for emp in object_list %}
+		{% for emp in Employees %}
 		<tr>
 			<td>{{emp.name}}</td>
 			<td>{{emp.surname}}</td>
 			<td>{{emp.date_of_birth}}</td>
 			<td>{{emp.position_held}}</td>
 			<td>{{emp.salary}}</td>
-			<td>{{emp.depart}}</td>
+			<td>{{emp.department_name}}</td>
 			<form method="get" action="{% url 'edit_employee' emp.id %}">
 				{% csrf_token %}
 				<td class="button_row"><button class="edit_Button">Edit</button></td>

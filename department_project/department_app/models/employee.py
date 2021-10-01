@@ -9,7 +9,7 @@ class Employees(models.Model):
     date_of_birth = models.DateField()
     position_held = models.CharField(max_length=20)
     salary = models.DecimalField(max_digits=6, decimal_places=2)
-    depart = models.ForeignKey('Department', on_delete=models.CASCADE, )
+    depart = models.ForeignKey('Department', on_delete=models.CASCADE, related_name='department_name')
 
     def __str__(self):
         return f'{self.surname} {self.name}'

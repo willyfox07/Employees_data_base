@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from department_app.views.department_view import DepartmentCreateView, DepartmentDeleteView,\
+from department_app.service.department_service import DepartmentCreateView, DepartmentDeleteView,\
                                                   DepartmentUpdateView, DepartmentListView
-from department_app.views.employee_view import EmployeeCreateView, EmployeeDeleteView,\
+from department_app.service.employee_servi import EmployeeCreateView, EmployeeDeleteView,\
                                                   EmployeeUpdateView, EmployeeListView
 
 urlpatterns = [
@@ -28,10 +28,8 @@ urlpatterns = [
     path('create_department/', DepartmentCreateView.as_view(), name="create_department"),
     path('edit_department/<int:pk>', DepartmentUpdateView.as_view(), name="edit_department"),
     path('delete_department/<int:pk>', DepartmentDeleteView.as_view(), name="delete_department"),
-    path('employee/',EmployeeListView.as_view(), name="employee_page"),
+    path('employee/', EmployeeListView.as_view(), name="employee_page"),
     path('employee/create_employee/', EmployeeCreateView.as_view(), name="create_employee"),
     path('employee/edit_employee/<int:pk>', EmployeeUpdateView.as_view(), name="edit_employee"),
     path('employee/delete_employee/<int:pk>', EmployeeDeleteView.as_view(), name="delete_employee"),
-
-
 ]
