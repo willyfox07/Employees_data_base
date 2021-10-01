@@ -3,11 +3,11 @@ import requests
 from django.http import JsonResponse
 from ..models.department import Department
 from department_app.forms.department_form import DepartmentForm
-from django.urls import reverse_lazy, reverse
+from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView,\
                                     ListView, DeleteView
 from django.views.generic.list import MultipleObjectMixin
-
+from rest_framework.reverse import reverse
 
 class DepartmentListView(ListView):
     """Class for dispalying models"""
@@ -17,7 +17,7 @@ class DepartmentListView(ListView):
     object_list = None
 
     def get_context_data(self, **kwargs):
-        department = requests.get('http://localhost'+reverse('department_app:department_api')).json()
+        department = requests.get(reverse('department_api', request=self.request)).json()
         context = MultipleObjectMixin.get_context_data(self, **kwargs)
         context['Department'] = department
         return context
@@ -29,9 +29,7 @@ class DepartmentListView(ListView):
         max = params.get('max', '')
         location = params.get('location', '')
         filter_department = '?min=' + min + '&max=' + max + '&location=' + location
-        department = requests.get('http://localhost'
-                                  + reverse('department_app:department_api')
-                                  + filter_department).json()
+        department = requests.get(reverse('department_api', request=self.request) + filter_department).json()
         context['Department'] = department
         return self.render_to_response(context)
 

@@ -1,11 +1,11 @@
 import requests
 
 from department_app.models.employee import Employees
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse_lazy
 from department_app.forms.employee_form import EmployeeForm
 from django.views.generic import CreateView, UpdateView, ListView, DeleteView
 from department_app.service.department_service import DepartmentListView
-
+from rest_framework.reverse import reverse
 
 class EmployeeListView(ListView):
     """Class for dispalying models"""
@@ -22,9 +22,7 @@ class EmployeeListView(ListView):
         date_to = params.get('date_to', '')
         department = params.get('department', '')
         employee_filter = '?date_from=' + date_from + '&date_to=' + date_to + '&department=' + department
-        employee = requests.get('http://localhost'
-                                + reverse('department_app:employee_api')
-                                + employee_filter).json()
+        employee = requests.get(reverse('employee_api', request=self.request) + employee_filter).json()
         context['Employees'] = employee
         return self.render_to_response(context)
 
