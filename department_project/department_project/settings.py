@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8)uz^)i3g%o#=_5_@u4ldiarja0#)3o3+nx8hh=*qj1)5v_2ke
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 FILE_CHARSET = 'utf-8'
-ALLOWED_HOSTS = ['192.168.43.198:8000 ', 'https://powerful-scrubland-05021.herokuapp.com/']
+ALLOWED_HOSTS = ['192.168.43.198:8000 ', '127.0.0.1:8000', 'https://powerful-scrubland-05021.herokuapp.com/']
 
 # Application definition
 
